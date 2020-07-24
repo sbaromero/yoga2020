@@ -1,0 +1,5 @@
+[14-Sep-2018 13:38:10 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\Common\Inflector\Inflector' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/common/lib/Doctrine/Common/Util/Inflector.php on line 30
+[14-Mar-2019 11:27:48 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\Common\Inflector\Inflector' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/common/lib/Doctrine/Common/Util/Inflector.php on line 30
+[14-Mar-2019 20:43:35 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\Common\Inflector\Inflector' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/common/lib/Doctrine/Common/Util/Inflector.php on line 30
+[15-Mar-2019 04:41:37 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\Common\Inflector\Inflector' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/common/lib/Doctrine/Common/Util/Inflector.php on line 30
+[29-Apr-2019 19:13:13 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\Common\Inflector\Inflector' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/common/lib/Doctrine/Common/Util/Inflector.php on line 30

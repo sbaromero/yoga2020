@@ -1,0 +1,4 @@
+[09-Dec-2018 02:20:15 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined function bailout() in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Intl/Resources/bin/autoload.php on line 15
+[15-Mar-2019 15:31:49 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined function bailout() in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Intl/Resources/bin/autoload.php on line 15
+[16-Mar-2019 06:48:20 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined function bailout() in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Intl/Resources/bin/autoload.php on line 15
+[16-Mar-2019 18:02:43 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined function bailout() in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Intl/Resources/bin/autoload.php on line 15

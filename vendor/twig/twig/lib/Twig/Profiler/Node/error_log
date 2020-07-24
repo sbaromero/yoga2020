@@ -1,0 +1,9 @@
+[18-Nov-2018 02:28:46 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Node' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Node/EnterProfile.php on line 18
+[18-Nov-2018 04:53:08 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Node' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Node/LeaveProfile.php on line 18
+[18-Nov-2018 18:57:34 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Node' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Node/LeaveProfile.php on line 18
+[14-Mar-2019 20:25:01 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Node' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Node/EnterProfile.php on line 18
+[14-Mar-2019 20:25:05 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Node' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Node/LeaveProfile.php on line 18
+[15-Mar-2019 04:24:52 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Node' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Node/EnterProfile.php on line 18
+[15-Mar-2019 04:24:53 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Node' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Node/LeaveProfile.php on line 18
+[15-Mar-2019 19:13:42 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Node' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Node/EnterProfile.php on line 18
+[15-Mar-2019 19:13:47 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Node' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Node/LeaveProfile.php on line 18

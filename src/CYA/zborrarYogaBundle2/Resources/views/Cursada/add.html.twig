@@ -1,0 +1,155 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+    <div class="container-fluid profesorado">
+        <div class="container profesorado-icon">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2>Inscripción a Materia</h2>
+                    <a href="{{ path('cya_usuario_index') }}" class="head-link">
+        			        <h3>
+        			           <span><i class="icon ion-android-arrow-dropleft back"></i></span>
+        			            regresar a listado de usuarios
+        			         </h3>
+        			    </a>
+        			    
+        			     <a href="{{ path('cya_cursada_index') }}" class="head-link">
+        			        <h3>
+        			           <span><i class="icon ion-android-arrow-dropleft back"></i></span>
+        			            listado de inscripciones
+        			         </h3>
+        			    </a>
+        			    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    {{ form_start(form, {'attr' : {'role' : 'form'}, 'action':'', 'method':'POST' }) }}
+           
+     <div class="main container">
+       
+       <br> <br>
+         
+    	<fieldset>
+    	    
+        <div class="row well">
+           
+             <div class="col-sm-8"> 
+             <div class="row well" >
+             <br>
+             <h3>   <b>  Alumno: {{user.nombrecompleto}} </b> <br> <br>
+             <b> DNI: {{user.dni}} </b> </h3> 
+             <br>
+             </div>
+                  
+                  
+                  <div class="form-group">
+                     
+                          Inscribir a : &nbsp;&nbsp;
+                         <select class="selectpicker" data-live-search="true" id="materia" name="materia" width=800px  value="{{ app.request.get('materia') }}">
+                            <option value="" selected disabled>Materias</option>
+                            {% for ma in materias %}
+                            <option value="{{ ma.id }}">{{ ma.titulo }} ({{ ma.curso.titulo}}) </option>
+                           {% endfor %}
+                       </select>
+                      </div>
+                   
+           
+                    {#<div class="form-group">#}
+                    {#     Nota: &nbsp;&nbsp;#}
+                    {#     {{ form_widget(form.nota, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Nota','value':'EN CURSO'} }) }}#}
+                    {#     <span class="text-danger"> {{ form_errors(form.nota) }} </span>#}
+                    {#</div>#}
+          
+                    <div class="form-group">
+                         Comentario:  &nbsp;&nbsp;
+                         {{ form_widget(form.comentario, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Comentario'} }) }}
+                         <span class="text-danger"> {{ form_errors(form.comentario) }} </span>
+                    </div>
+                    
+                 {#   <div class="form-group">#}
+                 {#        Fecha de Inscripción#}
+                 {#        {{ form_widget(form.fechains,  { 'attr' :  {'data-value': hoy|date("d/m/Y"), 'class' : 'form-control', 'placeholder' : 'Fecha de Inscripcion'} }) }}#}
+                 {#    <span class="text-danger"> {{ form_errors(form.fechains) }} </span>#}
+                
+                 {#</div>#}
+                    
+                <br><br>
+               {{ form_widget(form.save, {'label' : 'Inscribir', 'attr': {'class': 'btn btn-success'} }) }}       
+            </div>
+    
+
+        	</fieldset>
+            <div class="col-sm-12">
+                
+                
+            </div>
+            {{ form_end(form) }}
+         </div>
+     </div>
+     
+     <br> 
+     
+     	<div class="container">
+     	    
+	    <div class="row well">
+	     <h4>   <b>  Situación Académica de:   {{user.nombrecompleto}} </b> <br> <br> </h4>	
+	    <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+							<th>Materia</th>
+							<th>Usuario/Alumno</th>
+							<th>Fecha Inscripcion</th>
+							<th>Nota</th>
+						   	<th>Comentario</th>
+                            <th>Acciones</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for inscripciones in pagination %}
+                            <tr data-id="{{ inscripciones.id }}">
+                                
+                                <td>{{ inscripciones.materia.titulo}} ({{ inscripciones.materia.curso.titulo}})</td>
+                                <td>{{ inscripciones.usuario.nombrecompleto}}</td>
+                                <td>{{ inscripciones.fechains | date('d/m/Y') }}</td>
+                                <td>{{ inscripciones.nota}}</td>
+                                <td>{{ inscripciones.comentario}}</td>
+                                <td class="actions">
+
+                                      <a href="{{ path('cya_cursada_delete', {id: inscripciones.id }) }}" 
+                                      onclick="return confirm('Está seguro de eliminar la inscripción??')"
+			                           class="btn btn-danger"  title = "Eliminar Inscripción">
+              
+			                            <i class="fa fa-trash" aria-hidden="true"></i> 
+			                        </a>
+			                        
+			                        
+			                             <a href="{{ path('cya_cursada_edit', { id: inscripciones.id }) }}" class="btn btn-primary" title = "Cambiar Nota">
+		    		                <span class="fa fa-graduation-cap"></span>
+			                       </a> 
+			                        
+
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+           <H4> {% trans %}Total Materias Del Alumno:{% endtrans %} {{ pagination.getTotalItemCount }}</H4>
+                {# display navigation #}
+                <div class="navigation">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+            </div>
+        </div>
+    </div>
+     
+     
+     
+     
+{% endblock %}
+

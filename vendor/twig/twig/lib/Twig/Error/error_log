@@ -1,0 +1,15 @@
+[15-Sep-2018 02:35:37 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Loader.php on line 26
+[15-Sep-2018 03:10:13 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Runtime.php on line 19
+[15-Sep-2018 04:12:09 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Syntax.php on line 19
+[14-Mar-2019 10:24:34 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Loader.php on line 26
+[14-Mar-2019 10:24:38 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Runtime.php on line 19
+[14-Mar-2019 10:24:40 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Syntax.php on line 19
+[14-Mar-2019 20:10:03 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Loader.php on line 26
+[14-Mar-2019 20:10:07 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Runtime.php on line 19
+[14-Mar-2019 20:10:11 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Syntax.php on line 19
+[15-Mar-2019 04:16:24 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Loader.php on line 26
+[15-Mar-2019 04:16:26 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Runtime.php on line 19
+[15-Mar-2019 04:16:29 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Syntax.php on line 19
+[29-Apr-2019 16:07:29 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Loader.php on line 26
+[29-Apr-2019 16:07:32 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Runtime.php on line 19
+[29-Apr-2019 16:07:35 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Error' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Error/Syntax.php on line 19

@@ -1,0 +1,2 @@
+[15-Mar-2019 02:15:23 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Symfony\Component\Serializer\Mapping\AttributeMetadataInterface' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Serializer/Mapping/AttributeMetadata.php on line 20
+[15-Mar-2019 02:15:30 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Symfony\Component\Serializer\Mapping\ClassMetadataInterface' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Serializer/Mapping/ClassMetadata.php on line 20

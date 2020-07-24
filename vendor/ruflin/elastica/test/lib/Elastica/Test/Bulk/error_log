@@ -1,0 +1,6 @@
+[14-Mar-2019 22:04:57 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Test\Base' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/test/lib/Elastica/Test/Bulk/ActionTest.php on line 10
+[14-Mar-2019 22:04:59 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Test\Base' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/test/lib/Elastica/Test/Bulk/ResponseSetTest.php on line 11
+[15-Mar-2019 05:57:17 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Test\Base' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/test/lib/Elastica/Test/Bulk/ActionTest.php on line 10
+[15-Mar-2019 05:57:23 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Test\Base' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/test/lib/Elastica/Test/Bulk/ResponseSetTest.php on line 11
+[15-Mar-2019 19:26:33 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Test\Base' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/test/lib/Elastica/Test/Bulk/ActionTest.php on line 10
+[15-Mar-2019 19:26:38 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Test\Base' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/test/lib/Elastica/Test/Bulk/ResponseSetTest.php on line 11

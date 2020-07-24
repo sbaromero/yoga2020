@@ -1,0 +1,167 @@
+{% extends 'layout.html.twig' %}
+
+  
+{% block body %}
+{{ parent() }}
+{# include('CYAYogaBundle:Usuario:messages/success.html.twig')#}
+{# include('CYAYogaBundle:Usuario:messages/danger.html.twig')#}
+    <div class="container-fluid alumnos">
+        <div class="container alumnos-icon">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2><i class="fa fa-users"></i> Listado de Usuarios </h2>
+                    <a href="{{ path('cya_usuario_add') }}" class="head-link">
+        			        <h3>
+        			            <span><i class="icon ion-android-person-add"></i></span>
+        			            agregar nuevo usuario
+        			         </h3>
+        			    </a>
+                </div>
+                <div class="col-sm-7">
+                    <form method="get" action="" class="form-inline pull-right" role="search">
+                    	<div class="form-group">
+                            <select class="selectpicker" data-live-search="true" id="usuariot" name="usuariot" value="{{ app.request.get('usuariot') }}">
+                                <option value="" selected disabled>Usuario</option>
+                                {% for us in usuariot %}
+                                    <option value="{{ us.id }}">{{ us.nombrecompleto }}</option>
+                                {% endfor %}
+                             </select>
+                        </div>
+        				
+        				<div class="form-group select-class">
+                          <select class="form-control" id="estado"name="estado" value="{{ app.request.get('estado') }}">
+                            <option value="3">Todos</option>
+                            <option value="1">Activos</option>
+                            <option value="0">Inactivos</option>
+                          </select>
+                        </div>
+                        
+                        <br>
+                        <br>
+                        
+                        <div class="form-group select-class">
+                            <select class="form-control" id="tipocuota" name="tipocuota" value="{{ app.request.get('tipocuota') }}">
+                                <option value="" selected disabled>Buscar por Tipo de cuota</option>
+                                {% for tc in tipocuotas %}
+                                    <option value="{{ tc.id }}">{{ tc.nombre }}</option>
+                                {% endfor %}
+                             </select>
+                        </div>
+                        
+        				
+        				<input type="submit" value="Buscar" class="btn btn-default" >
+        			</form>
+                </div>
+            </div>
+        </div>
+    </div>
+           
+            
+	<div class="container">
+	    
+	    {% if  pagination.getTotalItemCount < 1000 %}
+	                  {% for usuario in pagination |slice(0,1)  %}
+	                <H4>  <b>   {{ usuario.tipocuota.nombre }} </b> </H4>
+	                   {% endfor %}
+	                  <H4> <b>Total Usuarios:</b>  {{ pagination.getTotalItemCount }} </H4>
+	                 
+	                  
+                <div class="navigation">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+                
+        {% endif %}        
+                
+                
+	    <div class="row well">
+	    	
+	    <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+
+								<th></th>
+							<th>{{ knp_pagination_sortable(pagination, 'Usuario', 'u.apellido') }}</th>
+							<th>{{ knp_pagination_sortable(pagination, 'DNI', 'u.dni') }}</th>
+							<th>{{ knp_pagination_sortable(pagination, 'Teléfono', 'u.telefono') }}</th>
+							<th>{{ knp_pagination_sortable(pagination, 'Mail', 'u.mail') }}</th>
+							<th>Tipo de Cuota</th>
+							<th>Estado</th>
+                            <th align = "right">      Acciones  </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for usuario in pagination %}
+                            <tr data-id="{{ usuario.id }}">
+                                
+                                
+                                <td colspan="1"> 
+                                
+                                {% if usuario.brochure != null %}
+                                <img src="{{ asset('web/uploads/brochures'~'/'~usuario.brochure) }}" class="avatar-tabla" />  
+                                 {% endif %} 
+                                 
+                                 <td>{% if usuario.isActive == 1 %}
+                                <b> <span class="text-success"> {{ usuario.apellido }}, {{ usuario.nombre }} </span>
+                                  {% endif %} 
+                                 
+                                 {% if usuario.isActive == 0 %}
+                                <b> <span class="text-danger"> {{ usuario.apellido }}, {{ usuario.nombre }} </span>
+                                  {% endif %} 
+                                    
+                                  
+                                </td>
+                                
+                                 <td>{{ usuario.dni }}</td>
+                                 <td>{{ usuario.telefono }}</td>
+                                 <td>{{ usuario.mail }}</td>
+                                <td>{{ usuario.tipocuota.nombre }}</td>
+                                <td>{% if usuario.isActive == 1 %}
+					               <b>   <span class="text-success">Activo</span></b>
+				                      {% elseif usuario.isActive == 0 %}
+						            <b> <span class="text-danger">Inactivo</span> </b>
+                                	{% endif %}</td>
+                               
+                               
+                                <td class="actions" style = "width:20%;" align = "center" >
+                                    <a href="{{ path('cya_usuario_view', {id: usuario.id }) }}" title = "Detalle"  class="btn btn-warning">
+                                        <i class="fa fa-search"></i> 
+                                    </a>
+                                {#  </td>#}
+                                
+                                {#<td class="actions">    #}
+                                    <a href="{{ path('cya_usuario_edit', {id: usuario.id }) }}"  class="btn btn-success" title = "Editar">
+                                        <i class="fa fa-pencil"></i> 
+                                    </a>
+                                {#   </td>#}
+                                {#<td class="actions">    #}
+                                   
+                                      <a href="{{ path('cya_usuario_editpass', {id: usuario.id }) }}" class="btn btn-danger" title= "Cambiar Password">
+                                        <i class="fa fa-key"></i> 
+                                    </a>
+                                {# </td>#}
+                                {#<td class="actions">    #}
+                                
+                                   <a href="{{ path('cya_usuario_imprimircuota', { id: usuario.id }) }}" class="btn btn-success" title = "Imprimir Cuota">
+		    		                <span class="fa fa-print"></span>
+			                       </a>
+			                      
+			                      <a href="{{ path('cya_cursada_add', { id: usuario.id }) }}" class="btn btn-primary" title = "Inscribir a Curso/Materias">
+		    		                <span class="fa fa-graduation-cap"></span>
+			                       </a> 
+			                       
+                             </td>
+                             
+                             
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+              <H4> Total Usuarios: {{ pagination.getTotalItemCount }}</H4>
+                <div class="navigation">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

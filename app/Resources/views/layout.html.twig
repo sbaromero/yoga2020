@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Sistema de Centro de Yoga Aplicada{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('public/css/bootstrap.min.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('public/css/style.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('public/css/bootstrap-switch.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('public/css/style.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('public/css/font-awesome.min.css') }}" type="text/css" media="all"/>
+            <link rel="stylesheet" href="{{ asset('public/css/bootstrap-datepicker3.min.css') }}" type="text/css" media="all"/>
+            <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900|Droid+Serif:400,400italic,700italic" rel='stylesheet' type='text/css'>
+            <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="{{ asset('public/css/bootstrap-select.css') }}" />
+            <link rel="stylesheet" href="{{ asset('public/css/bootstrap-select.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('public/js_plugins/toastr/toastr.min.css') }}" />
+               
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        
+    </head>
+    <body id="inicio">
+        {% block body %}
+        
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {{ include('menu.html.twig') }}
+        {% endif %}
+        
+        {% endblock %}
+        
+        {% block footer %}
+        {{ include('footer.html.twig') }}
+        {% endblock %}
+        
+        {% block javascripts %}  
+            <script src="{{ asset('public/js/jquery-3.1.0.min.js') }}"></script>
+            <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('public/js/bootbox.min.js') }}"></script>
+            <script src="{{ asset('public/js/bootstrap-datepicker.js') }}"></script>
+            <script src="{{ asset('public/js/funciones.js') }}"></script>
+            <script src="{{ asset('public/js/bootstrap-switch.js') }}"></script>
+            <script src="{{ asset('public/js/bootstrap-select.js') }}"></script>
+            <script src="{{ asset('public/js/bootstrap-select.min.js') }}"></script>
+            <script src="{{ asset('public/js_plugins/toastr/toastr.min.js') }}"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.js-datepicker').datepicker({
+                        format: 'yyyy-mm-dd'
+                    });
+                    
+                    $('.inputswitch').bootstrapSwitch();
+                    $('.selectpicker').selectpicker({});
+                    
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "progressBar": true,
+                        "positionClass": "toast-top-left",
+                        "preventDuplicates": false,
+                        "showDuration": "3000",
+                        "hideDuration": "1000",
+                        "timeOut": "10000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    }
+                    {% for flashMessage in app.session.flashbag.get('success') %}
+                        toastr.success('{{ flashMessage|trans }}', '{{ 'Transacción exitosa'|trans }}');
+                    {% endfor %}
+
+                    {% for flashMessage in app.session.flashbag.get('notice') %}
+                        toastr.info('{{ flashMessage|trans }}', '{{ 'Información del Sistema'|trans }}');
+                    {% endfor %}
+                   
+                    {% for flashMessage in app.session.flashbag.get('error') %}
+                        toastr.error('{{ flashMessage|trans }}', '{{ 'Error'|trans }}');
+                    {% endfor %}
+                    {% if error is defined and error %}
+                        toastr.error('{{ error.messageKey|trans(error.messageData, 'security') }}', '{{ 'Error'|trans }}');
+                    {% endif %}
+                    {% if invalid_username is defined %}
+                        toastr.error('{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}) }}', '{{ 'Mensaje del sistema'|trans }}');
+                    {% endif %}
+                    {% if form is defined and form.vars.valid == false and app.request.method == 'POST' %}
+                        toastr.error('{{ 'Revise los valores ingresados'|trans }}', '{{ 'Error en los datos'|trans }}');
+                    {% endif %}
+                    
+                });
+                
+                
+                
+            </script>
+           
+           <script>  </script>
+            
+            
+        {% endblock %}
+    </body>
+</html>
+

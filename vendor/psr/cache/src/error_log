@@ -1,0 +1,8 @@
+[14-Sep-2018 16:09:01 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Cache\CacheException' not found in /home/yogaa/public_html/alumnos/vendor/psr/cache/src/InvalidArgumentException.php on line 12
+[13-Mar-2019 14:52:09 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Cache\CacheException' not found in /home/yogaa/public_html/alumnos/vendor/psr/cache/src/InvalidArgumentException.php on line 12
+[14-Mar-2019 00:32:55 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Cache\CacheException' not found in /home/yogaa/public_html/alumnos/vendor/psr/cache/src/InvalidArgumentException.php on line 12
+[14-Mar-2019 07:42:39 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Cache\CacheException' not found in /home/yogaa/public_html/alumnos/vendor/psr/cache/src/InvalidArgumentException.php on line 12
+[23-Apr-2019 04:56:25 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Cache\CacheException' not found in /home/yogaa/public_html/alumnos/vendor/psr/cache/src/InvalidArgumentException.php on line 12
+[29-Apr-2019 09:19:35 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Cache\CacheException' not found in /home/yogaa/public_html/alumnos/vendor/psr/cache/src/InvalidArgumentException.php on line 12
+[29-Apr-2019 15:22:04 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Cache\CacheException' not found in /home/yogaa/public_html/alumnos/vendor/psr/cache/src/InvalidArgumentException.php on line 12
+[05-Aug-2019 06:47:02 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Cache\CacheException' not found in /home/yogaa/public_html/alumnos/vendor/psr/cache/src/InvalidArgumentException.php on line 12

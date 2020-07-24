@@ -1,0 +1,35 @@
+[31-Aug-2018 12:13:09 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'creating archive "/home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/dist/random_compat.phar" disabled by the php.ini setting phar.readonly' in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php:13
+Stack trace:
+#0 /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php(13): Phar->__construct('/home/yogaa/pub...', 256, 'random_compat.p...')
+#1 {main}
+  thrown in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php on line 13
+[13-Mar-2019 14:51:10 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'creating archive "/home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/dist/random_compat.phar" disabled by the php.ini setting phar.readonly' in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php:13
+Stack trace:
+#0 /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php(13): Phar->__construct('/home/yogaa/pub...', 256, 'random_compat.p...')
+#1 {main}
+  thrown in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php on line 13
+[14-Mar-2019 00:32:36 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'creating archive "/home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/dist/random_compat.phar" disabled by the php.ini setting phar.readonly' in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php:13
+Stack trace:
+#0 /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php(13): Phar->__construct('/home/yogaa/pub...', 256, 'random_compat.p...')
+#1 {main}
+  thrown in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php on line 13
+[14-Mar-2019 07:42:27 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'creating archive "/home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/dist/random_compat.phar" disabled by the php.ini setting phar.readonly' in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php:13
+Stack trace:
+#0 /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php(13): Phar->__construct('/home/yogaa/pub...', 256, 'random_compat.p...')
+#1 {main}
+  thrown in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php on line 13
+[23-Apr-2019 04:55:05 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'creating archive "/home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/dist/random_compat.phar" disabled by the php.ini setting phar.readonly' in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php:13
+Stack trace:
+#0 /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php(13): Phar->__construct('/home/yogaa/pub...', 256, 'random_compat.p...')
+#1 {main}
+  thrown in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php on line 13
+[29-Apr-2019 09:19:17 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'creating archive "/home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/dist/random_compat.phar" disabled by the php.ini setting phar.readonly' in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php:13
+Stack trace:
+#0 /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php(13): Phar->__construct('/home/yogaa/pub...', 256, 'random_compat.p...')
+#1 {main}
+  thrown in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php on line 13
+[29-Apr-2019 15:22:00 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'creating archive "/home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/dist/random_compat.phar" disabled by the php.ini setting phar.readonly' in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php:13
+Stack trace:
+#0 /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php(13): Phar->__construct('/home/yogaa/pub...', 256, 'random_compat.p...')
+#1 {main}
+  thrown in /home/yogaa/public_html/alumnos/vendor/paragonie/random_compat/other/build_phar.php on line 13

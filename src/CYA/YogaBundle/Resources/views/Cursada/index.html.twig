@@ -1,0 +1,104 @@
+{% extends 'layout.html.twig' %}
+
+  
+{% block body %}
+{{ parent() }}
+{{ include('CYAYogaBundle:Materia:messages/success.html.twig')}}
+<div class="container-fluid profesorado">
+        <div class="container profesorado-icon">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2><i class="fa fa-bookmark" aria-hidden="true"></i> &nbsp; 
+                   Inscripciones a Cursar</h2>
+                    <a href="{{ path('cya_usuario_index') }}" class="head-link">
+        			        <h3>
+        			           <span><i class="icon ion-plus"></i></span>
+    			                 Nueva Inscripción
+        			         </h3>
+        			    </a>
+                </div>
+                <div class="col-sm-7">
+
+            </div>
+                
+            </div>
+            
+             <form method="get" action="" class="form-inline pull-right" role="search">
+        			
+        			 <select class="selectpicker" data-live-search="true" id="materia" name="materia" width=800px  value="{{ app.request.get('materia') }}">
+                            <option value="" selected disabled Required>Seleccione Módulo </option>
+                            {% for ma in materias %}
+                            <option value="{{ ma.id }}">{{ ma.titulo }} ({{ ma.curso.titulo}}) </option>
+                           {% endfor %}
+                       </select>
+        			<input type="submit" value="Buscar" class="btn btn-default" >
+        			</form> 
+        </div>
+    
+    <br><br>
+    
+    </div>
+	<br>
+	<div class="container">
+	    {% if titulo != null %}
+	    <h4><b>	{{titulo}}</b></h4><br>
+	    {% endif %}
+	    <div class="row well">
+	    	
+	    <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+
+							{#<th>{{ knp_pagination_sortable(pagination, 'Código', 'r.id') }}</th>#}
+							{#<th>{{ knp_pagination_sortable(pagination, 'Nombre del Módulo', 'r.materia.titulo') }} </th>#}
+							{#<th>{{ knp_pagination_sortable(pagination, 'Nombre de Curso', 'r.materia.curso.titulo') }} </th>#}
+							<th>{{ knp_pagination_sortable(pagination, 'Alumno', 'r.usuario.nombrecompleto') }} </th>
+							<th>{{ knp_pagination_sortable(pagination, 'Nota', 'r.nota') }} </th>
+							<th>{{ knp_pagination_sortable(pagination, 'Comentario', 'r.comentario') }} </th>
+						
+                            <th>Acciones</th>
+                            
+                        </tr>
+                    </thead>
+                  
+                    <tbody>
+                        {% for materia in pagination %}
+                            <tr data-id="{{ materia.id }}">
+                                
+                                {#<td>{{ materia.id }}</td>#}
+                                {#<td>{{ materia.materia.titulo }}</td>#}
+                                {# <td>{{ materia.materia.curso.titulo }}</td>#}
+                                 <td>{{ materia.usuario.nombrecompleto }}</td>
+                                <td>{{ materia.nota }}</td>
+                                <td>{{ materia.comentario }}</td>
+                               
+                                <td class="actions">
+
+                                      <a href="{{ path('cya_cursada_delete', {id: materia.id }) }}" 
+                                      onclick="return confirm('Está seguro de eliminar la inscripción??')"
+			                           class="btn btn-danger"  title = "Eliminar Inscripción">
+              
+			                            <i class="fa fa-trash" aria-hidden="true"></i> 
+			                        </a>
+			                        
+			                          <a href="{{ path('cya_cursada_edit', { id: materia.id }) }}" class="btn btn-primary" title = "Cambiar Nota">
+		    		                <span class="fa fa-graduation-cap"></span>
+			                       </a> 
+                                    
+                                    
+                                    
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+           <H4> {% trans %}Total Inscripciones:{% endtrans %} {{ pagination.getTotalItemCount }}</H4>
+                {# display navigation #}
+                <div class="navigation">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

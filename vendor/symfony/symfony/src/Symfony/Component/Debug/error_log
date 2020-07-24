@@ -1,0 +1,4 @@
+[18-Nov-2018 17:28:53 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Debug/BufferingLogger.php on line 22
+[14-Mar-2019 16:41:09 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Debug/BufferingLogger.php on line 22
+[15-Mar-2019 00:56:16 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Debug/BufferingLogger.php on line 22
+[15-Mar-2019 12:40:46 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Debug/BufferingLogger.php on line 22

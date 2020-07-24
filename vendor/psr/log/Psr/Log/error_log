@@ -1,0 +1,14 @@
+[18-Nov-2018 19:12:31 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/NullLogger.php on line 14
+[29-Dec-2018 23:59:11 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/AbstractLogger.php on line 13
+[14-Mar-2019 00:33:34 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/AbstractLogger.php on line 13
+[14-Mar-2019 00:34:11 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/NullLogger.php on line 14
+[14-Mar-2019 07:43:51 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/AbstractLogger.php on line 13
+[14-Mar-2019 07:44:02 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/NullLogger.php on line 14
+[14-Mar-2019 15:02:10 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/AbstractLogger.php on line 13
+[14-Mar-2019 15:02:14 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/NullLogger.php on line 14
+[29-Apr-2019 09:20:31 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/AbstractLogger.php on line 13
+[29-Apr-2019 09:21:04 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/NullLogger.php on line 14
+[29-Apr-2019 15:22:22 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/AbstractLogger.php on line 13
+[29-Apr-2019 15:22:24 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/NullLogger.php on line 14
+[30-Apr-2019 00:25:56 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/AbstractLogger.php on line 13
+[30-Apr-2019 00:26:01 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Psr\Log\AbstractLogger' not found in /home/yogaa/public_html/alumnos/vendor/psr/log/Psr/Log/NullLogger.php on line 14

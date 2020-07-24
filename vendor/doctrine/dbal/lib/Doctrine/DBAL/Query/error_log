@@ -1,0 +1,5 @@
+[18-Nov-2018 19:57:17 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\DBALException' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Query/QueryException.php on line 28
+[14-Mar-2019 11:48:13 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\DBALException' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Query/QueryException.php on line 28
+[14-Mar-2019 20:59:42 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\DBALException' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Query/QueryException.php on line 28
+[15-Mar-2019 04:54:38 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\DBALException' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Query/QueryException.php on line 28
+[29-Apr-2019 19:38:26 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\DBALException' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Query/QueryException.php on line 28

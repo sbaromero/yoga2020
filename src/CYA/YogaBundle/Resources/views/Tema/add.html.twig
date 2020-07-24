@@ -1,0 +1,70 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+    <div class="container-fluid profesorado">
+        <div class="container profesorado-icon">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2>Nuevo Tema</h2>
+                    <a href="{{ path('cya_materia_index') }}" class="head-link">
+        			        <h3>
+        			           <span><i class="icon ion-android-arrow-dropleft back"></i></span>
+        			            regresar a listado de materias
+        			         </h3>
+        			    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    {{ form_start(form, {'attr' : {'role' : 'form'}, 'action':'', 'method':'POST' }) }}
+           
+     <div class="container grey-input">
+    	<fieldset>
+        <div class="row">
+           
+           
+           
+           
+            <div class="col-sm-8"> 
+           
+                  <div class="form-group">
+                          Asignar Tema a  <br>
+                         <select class="selectpicker" data-live-search="true" id="materia" name="materia" value="{{ app.request.get('materia') }}">
+                            <option value="" selected disabled>Módulo</option>
+                            {% for cu in materia %}
+                           <option value="{{ cu.id }}">{{ cu.titulo }} ({{ cu.curso.titulo}})</option>
+                        {% endfor %}
+                       </select>
+                      </div>
+                   
+           
+           
+                    <div class="form-group">
+                         Título del Tema
+                         {{ form_widget(form.titulo, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Título'} }) }}
+                         <span class="text-danger"> {{ form_errors(form.titulo) }} </span>
+                    </div>
+          
+                    <div class="form-group">
+                         Link del Material 
+                         {{ form_widget(form.comentario, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Link del material (dropbox)'} }) }}
+                         <span class="text-danger"> {{ form_errors(form.comentario) }} </span>
+                    </div>
+            </div>
+    
+
+  	</fieldset>
+            <div class="col-sm-12">
+                
+                {{ form_widget(form.save, {'label' : 'Agregar Tema', 'attr': {'class': 'btn btn-success'} }) }}
+                 
+                
+            </div>
+            {{ form_end(form) }}
+         </div>
+     </div>
+{% endblock %}
+

@@ -1,0 +1,85 @@
+{% extends 'layout.html.twig' %}
+
+  
+{% block body %}
+{{ parent() }}
+{{ include('CYAYogaBundle:Movimiento:messages/success.html.twig')}}
+<div class="container-fluid caja">
+        <div class="container caja-icon">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2><i class="fa fa-usd"></i> &nbsp; Cierres de Caja</h2>
+                     <a href="{{ path('cya_caja_add') }}" class="head-link">
+        			        <h3>
+        			            <span><i class="icon ion-android-person-add"></i></span>
+        			            cerrar caja diaria
+        			         </h3>
+        			    </a>
+                  
+                </div>
+                <div class="col-sm-7">
+                    <form method="get" action="" class="form-inline pull-right" role="search">
+     
+                        
+                        <div class="select-class2">
+                            <div class="form-group">
+                                    Desde
+                                    <input type='date' class="" id="fd"name="fd" value="{{ app.request.get('fd') }}" />
+                            </div>
+                            
+                            <div class="form-group">
+                                    Hasta
+                                    <input type='date' class="" id="fh"name="fh" value="{{ app.request.get('fh') }}" />
+                            </div>
+                        
+                        <input type="submit" value="buscar" class="btn btn-success" margin-top="5px">
+        				</div>
+        			</form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+    	
+    	    <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+    
+    							<th>{{ knp_pagination_sortable(pagination, 'Fecha', 'm.fecha') }}</th>
+    					
+    							<th>{{ knp_pagination_sortable(pagination, 'Monto', 'm.monto') }} </th>
+    						
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for movimiento in pagination %}
+                                <tr data-id="{{ movimiento.id }}">
+                                  <td>  
+                                    <span class="text-success"> {{ movimiento.fecha | date('d/m/Y -  H:m:s' ) }}  </span>
+                                   </td>
+
+                                    <td>
+                                   <strong>  <span class="text-success"> $ {{ movimiento.monto }} </span> </strong>
+                                    </td>
+                                    
+    
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                   
+                 <H4> {% trans %}Total Movimientos:{% endtrans %} {{ pagination.getTotalItemCount }}</H4>
+                    <div class="navigation">
+                        {{ knp_pagination_render(pagination) }}
+                    </div>
+    
+                </div>   
+                    
+                </div>
+            </div>
+        </div>
+ </div>
+{% endblock %}

@@ -1,0 +1,4 @@
+[14-Mar-2019 11:31:38 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\Connection' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connections/MasterSlaveConnection.php on line 84
+[14-Mar-2019 20:45:02 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\Connection' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connections/MasterSlaveConnection.php on line 84
+[15-Mar-2019 04:41:50 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\Connection' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connections/MasterSlaveConnection.php on line 84
+[29-Apr-2019 19:16:54 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\Connection' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connections/MasterSlaveConnection.php on line 84

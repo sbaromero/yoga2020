@@ -1,0 +1,4 @@
+[03-Nov-2018 00:48:56 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\ORM\ORMException' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Export/ExportException.php on line 8
+[14-Mar-2019 21:34:56 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\ORM\ORMException' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Export/ExportException.php on line 8
+[15-Mar-2019 05:40:42 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\ORM\ORMException' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Export/ExportException.php on line 8
+[15-Mar-2019 19:14:46 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\ORM\ORMException' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Export/ExportException.php on line 8

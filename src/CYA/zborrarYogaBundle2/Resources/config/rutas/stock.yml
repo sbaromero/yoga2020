@@ -1,0 +1,31 @@
+cya_stock_index:
+    path:    /index
+    defaults: { _controller: CYAYogaBundle:Stock:index }
+    
+cya_stock_add:
+    path:    /add
+    defaults: { _controller: CYAYogaBundle:Stock:add }
+
+cya_stock_create:
+    path:    /create
+    defaults: { _controller: CYAYogaBundle:Stock:create }
+    methods: POST
+
+cya_stock_edit:
+    path:    /edit/{id}
+    defaults: { _controller: CYAYogaBundle:Stock:edit }
+    
+cya_stock_update:
+    path:    /update/{id}
+    defaults: { _controller: CYAYogaBundle:Stock:update }
+    methods: [POST,PUT]
+    
+cya_stock_view:
+    path:    /view/{id}
+    defaults: { _controller: CYAYogaBundle:Stock:view }
+    
+cya_stock_delete:
+    path:    /delete/{id}
+    defaults: { _controller: CYAYogaBundle:Stock:delete }
+    
+    

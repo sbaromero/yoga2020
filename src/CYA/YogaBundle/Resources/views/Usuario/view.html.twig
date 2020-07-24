@@ -1,0 +1,237 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+	{{ parent() }}
+	
+	    <div class="container-fluid alumnos">
+        <div class="container alumnos-icon">
+            <div class="row">
+                <div class="col-sm-12">
+                 
+                 {%if usuario.brochure != null%}
+                  <img src="{{ asset('web/uploads/brochures'~'/'~usuario.brochure) }}" class="img-circle" /> 
+                  {%endif%}
+                   <h2>{{ usuario.nombre }} {{ usuario.apellido }} (edad: {{ edad }}    años)</h2> 
+                    <a href="{{ path('cya_usuario_index') }}" class="head-link">
+        			        <h3>
+        			           <i class="icon ion-android-arrow-dropleft-circle"></i>
+        			            regresar al listado de usuarios
+        			         </h3>
+        			    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+	
+	
+	<h4>
+	<div class="container well">
+	    <div class="col-md-9">
+	  	    <br>
+	        <dl>
+	           
+	            <div class="col-md-4">
+	            <dt>Usuario</dt></dt>
+	            <dd>
+	                {{ usuario.nombreusuario }}
+	                &nbsp;
+	            </dd>
+	            <br>
+
+	            <dt>Nombre</dt>
+	            <dd>
+	                {{ usuario.nombre }}
+	                &nbsp;
+	            </dd>
+	            <br>
+
+	            <dt>Apellido</dt>
+	            <dd>
+	                {{ usuario.apellido }}
+	                &nbsp;
+	            </dd>
+	            <br>
+
+               <dt>DNI</dt>
+	            <dd>
+	                {{ usuario.dni }}
+	                &nbsp;
+	            </dd>
+	            <br>
+	            
+	            
+	            
+	            
+	            <dt>Dirección</dt>
+	            <dd>
+	                {{ usuario.direccion }}
+	                &nbsp;
+	            </dd>
+	            <br>
+	            <dt>Ciudad</dt>
+	            <dd>
+	                {{ usuario.ciudad }}
+	                &nbsp;
+	            </dd>
+	            <br>
+	            
+
+	            <dt>Teléfono</dt>
+	            <dd>
+	                {{ usuario.telefono }}
+	                &nbsp;
+	            </dd>
+	            <br>
+
+                
+                
+	            <dt>Mail</dt>
+	            <dd>
+	                {{ usuario.mail }}
+	                &nbsp;
+	            </dd>
+	             <br>
+	             </div>
+	            <div class="col-md-4">
+	            <dt>Fecha Nacimiento</dt>
+	            <dd>
+	                {{ usuario.fechanacimiento|date('d/m/Y') }}
+	                &nbsp;
+	            </dd>
+	            <br>
+	            <dt>Fecha Ingreso</dt>
+	            
+	            <dd>
+	                {{ usuario.fechaingreso|date('d/m/Y') }}
+	                &nbsp;
+	            </dd>
+	            <br>
+	            <dt>Fecha Re-Ingreso</dt>
+	            <dd>
+	                {{ usuario.fechareingreso|date('d/m/Y') }}
+	                &nbsp;
+	            </dd>
+	            
+	            <br>
+	            <dt>Tipo de Cuota</dt>
+	            <dd>
+	          <b>  <span class="text-success">    {{ usuario.tipocuota.nombre }} </span></b>
+
+	                &nbsp;
+	            </dd>
+	            
+	          
+	            
+	            
+	            <br>
+	            <dt>Rol</dt>
+	            <dd>
+                	{% if usuario.rol == 'ROLE_ADMIN' %}
+						Administrador
+					{% elseif usuario.rol == 'ROLE_USER' %}
+						Usuario
+			    	{% elseif usuario.rol == 'ROLE_SUPER' %}
+				    	Superadmin
+                	{% endif %}
+	                &nbsp;
+	            </dd>
+	            <br>
+
+	          
+           <dt>Locker</dt>
+	           <b>
+	            <dd>
+                	{% if usuario.haveLocker == 1 %}
+						<span class="text-success">SI</span>
+					{% elseif usuario.haveLocker == 0 %}
+						<span class="text-warning">NO</span>
+							{% elseif usuario.haveLocker == null %}
+						<span class="text-warning">NO</span>
+                	{% endif %}
+	                &nbsp;
+	            </dd>
+	             </b>
+	            <br>
+               
+              <dt>Asociación</dt>
+	           <b>
+	            <dd>
+                	{% if usuario.haveAsoc == 1 %}
+						<span class="text-success">SI</span>
+					{% elseif usuario.haveAsoc == 0 %}
+						<span class="text-warning">NO</span>
+							{% elseif usuario.haveAsoc == null %}
+						<span class="text-warning">NO</span>
+                	{% endif %}
+	                &nbsp;
+	            </dd>
+	             </b>
+	            <br>
+               
+                 <dt>Estado del Usuario</dt>
+	           <b>
+	            <dd>
+                	{% if usuario.isActive == 1 %}
+						<span class="text-success">Usuario Activo</span>
+					{% elseif usuario.isActive == 0 %}
+						<span class="text-warning">Usuario Inactivo</span>
+							{% elseif usuario.isActive == null %}
+						<span class="text-warning">Usuario Inactivo</span>
+                	{% endif %}
+	                &nbsp;
+	            </dd>
+	             </b>
+	            <br>
+               
+               
+                 </div>
+               
+               
+	            <dt>Creado el</dt>
+	            <dd>
+	                {{ usuario.createdAt|date('d/m/Y') }}
+	                &nbsp;
+	            </dd>
+	            <br>
+
+	            <dt>Actualizado el</dt>
+	            <dd>
+	                {{ usuario.updatedAt|date('d/m/Y') }}
+	                &nbsp;
+	            </dd>
+	            <br>
+	         
+	       
+	        </dl>
+	    </div>
+	    
+	    
+	    <div class="col-md-3">
+	    	
+			<p>
+		    	<a href="{{ path('cya_usuario_edit', { id: usuario.id }) }}" class="btn btn-primary btn-lg btn-block">
+		    		<span class="glyphicon glyphicon-edit"></span>
+		        	 Editar Usuario
+				 </a>
+			</p>
+			
+			
+				<p>
+		    	<a href="{{ path('cya_alumnocc_index', { usuario: usuario.id }) }}" class="btn btn-primary btn-lg btn-block">
+		    		<span class="glyphicon glyphicon-edit"></span>
+		        	 Ver Cuentas Corrientes
+				 </a>
+			   </p>
+			   	<p>
+		    	<a href="{{ path('cya_usuario_imprimircuota', { id: usuario.id }) }}" class="btn btn-primary btn-lg btn-block">
+		    		<span class="glyphicon glyphicon-prin"></span>
+		        	 Imprimir Cuota
+				 </a>
+			   </p>
+			   
+	    </div>
+	</div>
+	</h4>
+	
+{% endblock %}

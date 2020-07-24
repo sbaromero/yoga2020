@@ -1,0 +1,3 @@
+[15-Mar-2019 00:31:26 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Monolog\Formatter\LineFormatter' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Formatter/ConsoleFormatter.php on line 23
+[15-Mar-2019 08:15:22 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Monolog\Formatter\LineFormatter' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Formatter/ConsoleFormatter.php on line 23
+[15-Mar-2019 19:47:14 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Monolog\Formatter\LineFormatter' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Formatter/ConsoleFormatter.php on line 23

@@ -1,0 +1,4 @@
+[15-Sep-2018 06:04:15 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Profiler_Dumper_Text' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Dumper/Html.php on line 16
+[14-Mar-2019 20:24:40 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Profiler_Dumper_Text' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Dumper/Html.php on line 16
+[15-Mar-2019 04:24:33 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Profiler_Dumper_Text' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Dumper/Html.php on line 16
+[15-Mar-2019 19:13:35 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Profiler_Dumper_Text' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/Dumper/Html.php on line 16

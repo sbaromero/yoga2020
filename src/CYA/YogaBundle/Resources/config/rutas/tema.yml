@@ -1,0 +1,31 @@
+cya_tema_index:
+    path:    /index
+    defaults: { _controller: CYAYogaBundle:Tema:index }
+    
+cya_tema_add:
+    path:    /add
+    defaults: { _controller: CYAYogaBundle:Tema:add }
+
+cya_tema_create:
+    path:    /create
+    defaults: { _controller: CYAYogaBundle:Tema:create }
+    methods: POST
+
+cya_tema_edit:
+    path:    /edit/{id}
+    defaults: { _controller: CYAYogaBundle:Tema:edit }
+    
+cya_tema_update:
+    path:    /update/{id}
+    defaults: { _controller: CYAYogaBundle:Tema:update }
+    methods: [POST,PUT]
+    
+cya_tema_view:
+    path:    /view/{id}
+    defaults: { _controller: CYAYogaBundle:Tema:view }
+    
+cya_tema_delete:
+    path:    /delete/{id}
+    defaults: { _controller: CYAYogaBundle:Tema:delete }
+    
+    

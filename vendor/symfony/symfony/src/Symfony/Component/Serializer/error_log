@@ -1,0 +1,2 @@
+[14-Mar-2019 20:16:14 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Symfony\Component\Serializer\SerializerInterface' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Serializer/Serializer.php on line 40
+[15-Mar-2019 04:13:02 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Symfony\Component\Serializer\SerializerInterface' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Serializer/Serializer.php on line 40

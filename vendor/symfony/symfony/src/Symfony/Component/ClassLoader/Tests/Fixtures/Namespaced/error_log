@@ -1,0 +1,3 @@
+[19-Nov-2018 23:49:52 America/Argentina/Buenos_Aires] PHP Warning:  Unsupported declare 'strict_types' in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced/WithStrictTypes.php on line 7
+[20-Nov-2018 11:55:10 America/Argentina/Buenos_Aires] PHP Warning:  Unsupported declare 'strict_types' in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced/WithStrictTypes.php on line 7
+[15-Mar-2019 23:06:34 America/Argentina/Buenos_Aires] PHP Warning:  Unsupported declare 'strict_types' in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced/WithStrictTypes.php on line 7

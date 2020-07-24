@@ -1,0 +1,2 @@
+[15-Mar-2019 12:37:43 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/CssSelector/Tests/XPath/TranslatorTest.php on line 18
+[16-Mar-2019 15:09:53 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/CssSelector/Tests/XPath/TranslatorTest.php on line 18

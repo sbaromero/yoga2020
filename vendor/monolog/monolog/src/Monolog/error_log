@@ -1,0 +1,7 @@
+[15-Sep-2018 03:23:01 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/monolog/monolog/src/Monolog/Logger.php on line 28
+[14-Mar-2019 00:31:27 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/monolog/monolog/src/Monolog/Logger.php on line 28
+[14-Mar-2019 07:39:54 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/monolog/monolog/src/Monolog/Logger.php on line 28
+[14-Mar-2019 15:01:45 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/monolog/monolog/src/Monolog/Logger.php on line 28
+[29-Apr-2019 09:18:18 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/monolog/monolog/src/Monolog/Logger.php on line 28
+[29-Apr-2019 15:21:09 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/monolog/monolog/src/Monolog/Logger.php on line 28
+[30-Apr-2019 00:25:03 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Psr\Log\LoggerInterface' not found in /home/yogaa/public_html/alumnos/vendor/monolog/monolog/src/Monolog/Logger.php on line 28

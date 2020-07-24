@@ -1,0 +1,93 @@
+{% extends 'layout.html.twig' %}
+
+  
+{% block body %}
+{{ parent() }}
+{{ include('CYAYogaBundle:Tema:messages/success.html.twig')}}
+<div class="container-fluid profesorado">
+        <div class="container profesorado-icon">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2><i class="fa fa-bookmark" aria-hidden="true"></i> &nbsp; 
+Temas</h2>
+                    <a href="{{ path('cya_tema_add') }}" class="head-link">
+        			        <h3>
+        			           <span><i class="icon ion-plus"></i></span>
+    			                Agregar Nuevo Tema
+        			         </h3>
+        			    </a>
+                </div>
+                <div class="col-sm-7">
+                    <form method="get" action="" class="form-inline pull-right" role="search">
+        			</form>
+        			
+        			
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="container">
+	    <div class="row">
+	    	
+	    <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+
+							<th>{{ knp_pagination_sortable(pagination, 'Código', 'r.id') }}</th>
+							<th>{{ knp_pagination_sortable(pagination, 'Nombre del Curso', 'r.titulo') }}</th>
+							<th>{{ knp_pagination_sortable(pagination, 'Nombre del Módulo', 'r.titulo') }} </th>
+							<th>{{ knp_pagination_sortable(pagination, 'Nombre del Tema', 'r.titulo') }} </th>
+							<th>{{ knp_pagination_sortable(pagination, 'Link al Temal (Dropbox) - Para acceder presione el botón azul', 'r.comentario') }} </th>
+						
+                            <th>Acciones</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for tema in pagination %}
+                            <tr data-id="{{ tema.id }}">
+                                
+                                <td>{{ tema.id }}</td>
+                                <td>{{ tema.materia.curso.titulo }}</td>
+                                <td>{{ tema.materia.titulo }}</td>
+                                <td>{{ tema.titulo }}</td>
+                                <td> {{ tema.comentario }}</td>
+                               
+                                <td class="actions">
+                                    <a href="{{ path('cya_tema_edit', {id: tema.id }) }}" class="btn btn-success" title="Editar">
+                                        {% trans %} <i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; 
+ {% endtrans %}
+                                    </a>
+                                    
+                                      <a href="{{ path('cya_tema_delete', {id: tema.id }) }}" onclick="return confirm('Está seguro??')"
+			                           class="btn btn btn-danger"  title="Eliminar">
+              
+			                           <i class="fa fa-trash" aria-hidden="true"></i> &nbsp; 
+
+			                        </a>
+                                    
+                              
+                                        <a href="{{ tema.comentario }}" onclick="return confirm('Está seguro??')"
+			                           class="btn btn btn-primary"  title="Link a Tema">
+              
+			                           <i class="fa fa-book" aria-hidden="true"></i> &nbsp; 
+
+			                        </a>
+                              
+                                    
+                                    
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+           <H4> {% trans %}Total Temas:{% endtrans %} {{ pagination.getTotalItemCount }}</H4>
+                {# display navigation #}
+                <div class="navigation">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

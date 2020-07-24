@@ -1,0 +1,4 @@
+[14-Sep-2018 13:35:24 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Extension' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Twig/WebProfilerExtension.php on line 22
+[15-Mar-2019 00:33:12 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Extension' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Twig/WebProfilerExtension.php on line 22
+[15-Mar-2019 11:59:48 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Extension' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Twig/WebProfilerExtension.php on line 22
+[15-Mar-2019 22:46:55 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_Extension' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Twig/WebProfilerExtension.php on line 22

@@ -1,0 +1,11 @@
+[18-Nov-2018 18:59:35 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Response' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/lib/Elastica/Bulk/Response.php on line 7
+[14-Mar-2019 07:58:45 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Response' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/lib/Elastica/Bulk/Response.php on line 7
+[14-Mar-2019 07:58:51 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Response' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/lib/Elastica/Bulk/ResponseSet.php on line 6
+[14-Mar-2019 14:55:41 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Response' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/lib/Elastica/Bulk/Response.php on line 7
+[14-Mar-2019 14:55:42 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Response' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/lib/Elastica/Bulk/ResponseSet.php on line 6
+[14-Mar-2019 21:54:28 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Response' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/lib/Elastica/Bulk/Response.php on line 7
+[14-Mar-2019 21:54:30 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Response' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/lib/Elastica/Bulk/ResponseSet.php on line 6
+[29-Apr-2019 15:28:27 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Response' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/lib/Elastica/Bulk/Response.php on line 7
+[29-Apr-2019 15:28:32 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Response' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/lib/Elastica/Bulk/ResponseSet.php on line 6
+[30-Apr-2019 00:38:59 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Response' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/lib/Elastica/Bulk/Response.php on line 7
+[30-Apr-2019 00:39:01 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Elastica\Response' not found in /home/yogaa/public_html/alumnos/vendor/ruflin/elastica/lib/Elastica/Bulk/ResponseSet.php on line 6

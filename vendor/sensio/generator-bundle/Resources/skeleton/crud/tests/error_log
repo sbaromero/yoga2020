@@ -1,0 +1,1 @@
+[14-Nov-2018 21:45:37 America/Argentina/Buenos_Aires] PHP Parse error:  syntax error, unexpected '}', expecting \\ (T_NS_SEPARATOR) in /home/yogaa/public_html/alumnos/vendor/sensio/generator-bundle/Resources/skeleton/crud/tests/test.php.twig on line 3

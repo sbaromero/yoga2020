@@ -1,0 +1,4 @@
+[14-Sep-2018 11:28:05 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Monolog\Logger' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Logger.php on line 22
+[14-Mar-2019 15:41:08 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Monolog\Logger' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Logger.php on line 22
+[15-Mar-2019 00:13:06 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Monolog\Logger' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Logger.php on line 22
+[15-Mar-2019 08:17:10 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Monolog\Logger' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Logger.php on line 22

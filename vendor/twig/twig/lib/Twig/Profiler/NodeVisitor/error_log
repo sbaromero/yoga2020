@@ -1,0 +1,4 @@
+[22-Sep-2018 12:02:31 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_BaseNodeVisitor' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/NodeVisitor/Profiler.php on line 16
+[14-Mar-2019 20:25:33 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_BaseNodeVisitor' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/NodeVisitor/Profiler.php on line 16
+[15-Mar-2019 04:25:06 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_BaseNodeVisitor' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/NodeVisitor/Profiler.php on line 16
+[15-Mar-2019 19:13:54 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Twig_BaseNodeVisitor' not found in /home/yogaa/public_html/alumnos/vendor/twig/twig/lib/Twig/Profiler/NodeVisitor/Profiler.php on line 16

@@ -1,0 +1,6 @@
+[14-Sep-2018 19:41:18 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Test\Tool\BaseTestCase' not found in /home/yogaa/public_html/alumnos/vendor/knplabs/knp-components/tests/Test/Pager/PaginatorTest.php on line 10
+[14-Mar-2019 07:13:25 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Test\Tool\BaseTestCase' not found in /home/yogaa/public_html/alumnos/vendor/knplabs/knp-components/tests/Test/Pager/PaginatorTest.php on line 10
+[14-Mar-2019 14:52:55 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Test\Tool\BaseTestCase' not found in /home/yogaa/public_html/alumnos/vendor/knplabs/knp-components/tests/Test/Pager/PaginatorTest.php on line 10
+[14-Mar-2019 21:44:40 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Test\Tool\BaseTestCase' not found in /home/yogaa/public_html/alumnos/vendor/knplabs/knp-components/tests/Test/Pager/PaginatorTest.php on line 10
+[29-Apr-2019 15:06:44 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Test\Tool\BaseTestCase' not found in /home/yogaa/public_html/alumnos/vendor/knplabs/knp-components/tests/Test/Pager/PaginatorTest.php on line 10
+[30-Apr-2019 00:10:03 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Test\Tool\BaseTestCase' not found in /home/yogaa/public_html/alumnos/vendor/knplabs/knp-components/tests/Test/Pager/PaginatorTest.php on line 10

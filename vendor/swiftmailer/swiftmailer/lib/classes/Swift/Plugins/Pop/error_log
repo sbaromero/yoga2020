@@ -1,0 +1,4 @@
+[27-Nov-2018 05:16:43 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Swift_IoException' not found in /home/yogaa/public_html/alumnos/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Pop/Pop3Exception.php on line 17
+[15-Mar-2019 00:16:31 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Swift_IoException' not found in /home/yogaa/public_html/alumnos/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Pop/Pop3Exception.php on line 17
+[15-Mar-2019 08:05:39 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Swift_IoException' not found in /home/yogaa/public_html/alumnos/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Pop/Pop3Exception.php on line 17
+[15-Mar-2019 19:36:19 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Swift_IoException' not found in /home/yogaa/public_html/alumnos/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Pop/Pop3Exception.php on line 17

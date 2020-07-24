@@ -1,0 +1,1 @@
+[15-Mar-2019 04:05:56 America/Argentina/Buenos_Aires] PHP Fatal error:  Interface 'Symfony\Component\Serializer\NameConverter\NameConverterInterface' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Serializer/NameConverter/CamelCaseToSnakeCaseNameConverter.php on line 20

@@ -1,0 +1,1 @@
+[16-Mar-2019 10:43:15 America/Argentina/Buenos_Aires] PHP Notice:  Undefined variable: foo in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Component/Templating/Tests/Fixtures/templates/foo.php on line 1

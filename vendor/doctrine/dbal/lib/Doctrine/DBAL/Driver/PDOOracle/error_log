@@ -1,0 +1,4 @@
+[19-Nov-2018 04:38:23 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\Driver\AbstractOracleDriver' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOOracle/Driver.php on line 35
+[14-Mar-2019 20:49:02 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\Driver\AbstractOracleDriver' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOOracle/Driver.php on line 35
+[15-Mar-2019 04:45:59 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\Driver\AbstractOracleDriver' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOOracle/Driver.php on line 35
+[15-Mar-2019 19:04:59 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Doctrine\DBAL\Driver\AbstractOracleDriver' not found in /home/yogaa/public_html/alumnos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOOracle/Driver.php on line 35

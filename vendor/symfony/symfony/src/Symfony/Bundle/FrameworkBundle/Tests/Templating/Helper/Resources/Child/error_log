@@ -1,0 +1,2 @@
+[19-Nov-2018 17:02:22 America/Argentina/Buenos_Aires] PHP Notice:  Undefined variable: global in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/Templating/Helper/Resources/Child/form_label.html.php on line 1
+[16-Mar-2019 19:28:11 America/Argentina/Buenos_Aires] PHP Notice:  Undefined variable: global in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/Templating/Helper/Resources/Child/form_label.html.php on line 1

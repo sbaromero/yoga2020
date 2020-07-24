@@ -1,0 +1,4 @@
+[14-Sep-2018 16:18:53 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Monolog\Processor\WebProcessor' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Processor/WebProcessor.php on line 23
+[15-Mar-2019 00:13:29 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Monolog\Processor\WebProcessor' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Processor/WebProcessor.php on line 23
+[15-Mar-2019 08:17:49 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Monolog\Processor\WebProcessor' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Processor/WebProcessor.php on line 23
+[15-Mar-2019 19:47:53 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Monolog\Processor\WebProcessor' not found in /home/yogaa/public_html/alumnos/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/Processor/WebProcessor.php on line 23
