@@ -31,6 +31,9 @@
                </div>
             </div>
             
+            
+            
+            
             <div class="col-sm-4"> 
                 <div class="form-group">
                      Valor
@@ -39,6 +42,26 @@
                 </div>
             </div>
            </div> 
+           
+           
+           
+          <br><br>
+          
+            <div class="col-sm-9">
+                <div class="form-group">
+                <b> Ingrese un mensaje para todos los Alumnos de este Curso/Actividad: </b> 
+                     {{ form_widget(form.mensaje, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Mensaje'} }) }}
+                     <span class="text-danger"> {{ form_errors(form.mensaje) }} </span>
+               </div>
+            </div>
+          
+          
+          
+          
+            <br><br><br>
+           
+           
+           
            <br><br><br>
           <div class="row">
               
@@ -51,7 +74,7 @@
                   
           </div>
           
-            <br><br><br>
+
             <div class="col-sm-6">
                 {{ form_widget(form.save, {'label' : 'Agregar tipo de cuota', 'attr': {'class': 'btn alumnos-btn'} }) }}
             </div>

@@ -1,5 +1,0 @@
-cya_maestroventa_add:
-    path:    /add
-    defaults: { _controller: CYAYogaBundle:Maestroventa:add }
-    
-    

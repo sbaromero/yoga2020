@@ -1,8 +1,0 @@
-cya_caja_index:
-    path:    /index
-    defaults: { _controller: CYAYogaBundle:Caja:index }
-    
-cya_caja_add:
-    path:    /add
-    defaults: { _controller: CYAYogaBundle:Caja:add }
-

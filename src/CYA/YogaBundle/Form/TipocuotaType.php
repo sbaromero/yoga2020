@@ -21,9 +21,8 @@ class TipocuotaType extends AbstractType
         $builder
             ->add('nombre',TextType::class)
             ->add('valor',MoneyType::class, array('currency' => 'ARS'))
-            ->add('escurso', CheckboxType::class, array('required' => false,
-                                                        
-                                                         'attr'     =>array ('class'=>'inputswitch','data-on-text'=>'Curso','data-off-text'=>'Clase'))) 
+            ->add('escurso', CheckboxType::class, array('required' => false,'attr' =>array ('class'=>'inputswitch','data-on-text'=>'Curso','data-off-text'=>'Clase'))) 
+            ->add('mensaje',TextType::class, array('required' => false)  )
             // ->add('instructorado', CheckboxType::class, array('required' => false, 'attr' => array ('class'=>'inputswitch','data-on-text'=>'SI','data-off-text'=>'NO'))) 
             // ->add('clasesyoga', CheckboxType::class, array('required' => false, 'attr' => array ('class'=>'inputswitch','data-on-text'=>'SI','data-off-text'=>'NO'))) 
             // ->add('asociacion', CheckboxType::class, array('required' => false, 'attr' => array ('class'=>'inputswitch','data-on-text'=>'SI','data-off-text'=>'NO'))) 

@@ -20,6 +20,8 @@
 		         
 		        <h2 class="bienvenido">
 		            Bienvenido  al Sistema de Alumnos del Centro de Yoga Aplicada: {{ app.user.nombrecompleto}}
+		           
+		            
 		            <!-- <small>
 		            {% if app.user.rol == 'ROLE_ADMIN' %}
 		                Administrador
@@ -189,6 +191,15 @@
 	        </div>
 	        </a>
 	    </div>
+		 <br>
+		<b> Mensajes para {{ app.user.nombrecompleto}} </b> <br><br>
+		           Curso Actual: <i>{{ app.user.tipocuota.mensaje}}</i> <br><br>
+		           Administración:<i></i>
 	</div>
 	{% endif %}
+	
+	
+
+	
+	
 {% endblock %}

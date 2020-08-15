@@ -37,7 +37,7 @@ class Tipocuota
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre", type="string", length=255, unique=true)
+     * @ORM\Column(name="nombre", type="string", length=255, unique=false)
      */
     private $nombre;
 
@@ -54,6 +54,16 @@ class Tipocuota
      * @ORM\Column(name="escurso", type="boolean",nullable=true)
      */
     private $escurso;
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mensaje", type="string", length=255, unique=false, nullable=true)
+     */
+    private $mensaje;
+
 
 
 
@@ -177,6 +187,32 @@ class Tipocuota
     }
 
     
+    /**
+     * Set mensaje
+     *
+     * @param string $mensaje
+     *
+     * @return Tipocuota
+     */
+    public function setMensaje($mensaje)
+    {
+        $this->mensaje = $mensaje;
+
+        return $this;
+    }
+
+    /**
+     * Get mensaje
+     *
+     * @return string
+     */
+    public function getMensaje()
+    {
+        return $this->mensaje;
+    }
+    
+    
+ 
     
     
     
