@@ -194,10 +194,11 @@
 		 <br>
 		<b> Mensajes para {{ app.user.nombrecompleto}} </b> <br><br>
 		           {% if app.user.tipocuota.mensaje %}
-		           Para el curso actual (<i>{{ app.user.tipocuota.nombre}}</i>) : "<i>{{ app.user.tipocuota.mensaje}}</i>" <br><br>
+		           Para el curso actual (<i>{{ app.user.tipocuota.nombre}}</i>) : <i>"{{ app.user.tipocuota.mensaje}}"</i> <br><br>
 		           	{% endif %}
-		           
-		           Mensaje de Administración:<i></i>
+		           {% if app.user.mensaje %}
+		           Mensaje de Administración: <i>"{{ app.user.mensaje}}"</i>
+		           {% endif %}
 	</div>
 	{% endif %}
 	
