@@ -3,11 +3,31 @@
 {% block body %}
     {{ parent() }}
     {{ include('CYAYogaBundle:Usuario:messages/success.html.twig') }}
+	
+	
+	    <div class="container-fluid alumnos">
+        <div class="container alumnos-icon">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2> <i class="fa fa-user"></i>  Editar Usuario </h2>
+                    <a href="{{ path('cya_usuario_index') }}" class="head-link">
+        			        <h3>
+        			           <span><i class="icon ion-android-arrow-dropleft back"></i></span>
+        			            regresar al listado de usuarios
+        			         </h3>
+        			    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+	
+	
+	
 	<div class="main container">
 		<div class="row well">
 			<div class="col-md-20">
 				<div class="page-header">
-					<h2>Editar Usuario </h2>
 					   {%if usuario.brochure != null%}
 					 <img src="{{ asset('web/uploads/brochures'~'/'~usuario.brochure) }}" class="avatar-tabla" /> 
 					 {%endif%}
@@ -22,16 +42,17 @@
 				<h4 class="text-danger">{{ form_errors(form) }}</h4>
                      
 	
-					     
-				
-					<fieldset>
-                     
-            
-	            
+					   
+	            	    
+	            	    
+	            	    
                  <div class="col-md-20">
                    
                    
                  <div class="col-md-6">
+                 	
+                 	
+                 	
 					    <div class="form-group">
 					        Nombre de usuario
 					        {{ form_widget(form.nombreusuario, {'attr': {'class': 'form-control', 'placeholder' : 'Nombre de usuario'}}) }}
@@ -139,9 +160,7 @@
 					    <br> 
 					<br>
                     <br>
-				    <p align=center>
-				        {{ form_widget(form.save, {'label' : 'Grabar Modificación', 'attr': {'class': 'btn btn-success'}}) }}
-				    </p>
+				 
 		</div>		
 		</div>
 				
@@ -154,15 +173,34 @@
 				
 				
 				
-				
+		 
+            
+                 
 				
 				 	</fieldset>
-                     
+             
 
                  
                    
-				{{ form_end(form) }}
-			</div>
-		</div>
-	</div>
+			
+		 	
+			              <br><br> 
+				
+				 	</div>
+				 	 	</div>
+                      	<b> Ingrese un mensaje para este alumno: </b> 
+                     {{ form_widget(form.mensaje, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Mensaje'} }) }}
+                     <span class="text-danger"> {{ form_errors(form.mensaje) }} </span> 
+            
+	            	    <br><br> 
+	            	    
+	            	       <p align=left>
+				        {{ form_widget(form.save, {'label' : 'Grabar Modificación', 'attr': {'class': 'btn btn-success'}}) }}
+				    </p>
+	            	    	<fieldset>
+	            	    	{{ form_end(form) }}
+	            	    	
+	            	    
+	  
+
 {% endblock %}

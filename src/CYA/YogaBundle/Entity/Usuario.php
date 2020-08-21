@@ -198,6 +198,18 @@ class Usuario implements AdvancedUserInterface, \Serializable
      */
     private $brochure;
 
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mensaje", type="string", length=255, unique=false, nullable=true)
+     */
+    private $mensaje;
+
+
+
     public function getBrochure()
     {
         return $this->brochure;
@@ -836,6 +848,34 @@ class Usuario implements AdvancedUserInterface, \Serializable
     public function getNombrecompleto(){
         return $this->nombre . " " . $this->apellido;
     }
+    
+    
+     /**
+     * Get mensaje
+     *
+     * @return string
+     */
+    public function getMensaje()
+    {
+        return $this->mensaje;
+    }
+    
+    
+    /**
+     * Set mensaje
+     *
+     * @param string $mensaje
+     *
+     * @return Usuario
+     */
+    public function setMensaje($mensaje)
+    {
+        $this->mensaje = $mensaje;
+
+        return $this;
+    }
+
+   
     
     
 }

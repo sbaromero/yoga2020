@@ -66,7 +66,7 @@ class UsuarioType extends AbstractType
                     'choice_label' => 'nombre',
                     'placeholder'  => 'Seleccione un tipo de cuota',
                 ))
-            
+               ->add('mensaje',TextType::class, array('required' => false)  )
             ->add('save', SubmitType::class)   
         ; 
     }
