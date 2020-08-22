@@ -34,28 +34,28 @@
             
             <div class="col-sm-8"> 
                     <div class="form-group">
-                         Descripción del Curso
-                         {{ form_widget(form.descripcion, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Descripcion'} }) }}
+                        Link del Curso
+                         {{ form_widget(form.descripcion, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Link'} }) }}
                          <span class="text-danger"> {{ form_errors(form.descripcion) }} </span>
                     </div>
             </div>
     
-     <div class="col-sm-2"> 
-                    <div class="form-group">
-                         Fecha de Inicio
-                         {{ form_widget(form.fechaini, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha de Inicio'} }) }}
-                         <span class="text-danger"> {{ form_errors(form.fechaini) }} </span>
-                    </div>
-            </div>
+     {#<div class="col-sm-2"> #}
+     {#               <div class="form-group">#}
+     {#                    Fecha de Inicio#}
+     {#                    {{ form_widget(form.fechaini, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha de Inicio'} }) }}#}
+     {#                    <span class="text-danger"> {{ form_errors(form.fechaini) }} </span>#}
+     {#               </div>#}
+     {#       </div>#}
       
      
-          <div class="col-sm-2"> 
-                    <div class="form-group">
-                         Fecha de Finalización
-                         {{ form_widget(form.fechafin, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha de Finalización'} }) }}
-                         <span class="text-danger"> {{ form_errors(form.fechafin) }} </span>
-                    </div>
-            </div>
+     {#     <div class="col-sm-2"> #}
+     {#               <div class="form-group">#}
+     {#                    Fecha de Finalización#}
+     {#                    {{ form_widget(form.fechafin, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha de Finalización'} }) }}#}
+     {#                    <span class="text-danger"> {{ form_errors(form.fechafin) }} </span>#}
+     {#               </div>#}
+     {#       </div>#}
   	</fieldset>
             <div class="col-sm-12">
                 

@@ -21,8 +21,8 @@ class CursoType extends AbstractType
             
             ->add('titulo',TextType::class)
             ->add('descripcion',TextType::class)
-            ->add('fechaini', DateType::class, array('widget' => 'single_text','attr' => ['class' => 'js-datepicker'],))
-            ->add('fechafin', DateType::class, array('widget' => 'single_text','attr' => ['class' => 'js-datepicker'],))
+            // ->add('fechaini', DateType::class, array('widget' => 'single_text','attr' => ['class' => 'js-datepicker'],))
+            // ->add('fechafin', DateType::class, array('widget' => 'single_text','attr' => ['class' => 'js-datepicker'],))
             ->add('save', SubmitType::class)  
         ;
     }

@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-sm-5">
                     <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> &nbsp; 
-Cursos</h2>
+Cursos Online</h2>
                     <a href="{{ path('cya_curso_add') }}" class="head-link">
         			        <h3>
         			           <span><i class="icon ion-plus"></i></span>
@@ -36,9 +36,9 @@ Cursos</h2>
 
 							<th>{{ knp_pagination_sortable(pagination, 'Código', 'r.id') }}</th>
 							<th>{{ knp_pagination_sortable(pagination, 'Nombre de Curso', 'r.titulo') }} </th>
-							<th>{{ knp_pagination_sortable(pagination, 'Descripción', 'r.descripcion') }} </th>
-							<th>{{ knp_pagination_sortable(pagination, 'Fecha inicio', 'r.fechaini') }} </th>
-							<th>{{ knp_pagination_sortable(pagination, 'Fecha Fin', 'r.fechafin') }} </th>
+							<th>{{ knp_pagination_sortable(pagination, 'Link', 'r.descripcion') }} </th>
+							{#<th>{{ knp_pagination_sortable(pagination, 'Fecha inicio', 'r.fechaini') }} </th>#}
+							{#<th>{{ knp_pagination_sortable(pagination, 'Fecha Fin', 'r.fechafin') }} </th>#}
 						
                             <th>Acciones</th>
                             
@@ -51,8 +51,8 @@ Cursos</h2>
                                 <td>{{ curso.id }}</td>
                                 <td>{{ curso.titulo }}</td>
                                 <td>{{ curso.descripcion }}</td>
-                                <td>{{ curso.fechaini| date('d/m/Y') }}</td>
-                                <td>{{ curso.fechafin | date('d/m/Y')}}</td>
+                                {#<td>{{ curso.fechaini| date('d/m/Y') }}</td>#}
+                                {#<td>{{ curso.fechafin | date('d/m/Y')}}</td>#}
                                 <td class="actions">
                                     <a href="{{ path('cya_curso_edit', {id: curso.id }) }}" class="btn btn-success" title="Editar">
                                         {% trans %} <i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; 

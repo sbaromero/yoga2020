@@ -25,28 +25,28 @@
 						
 
 					    <div class="form-group">
-	                         {{ form_label(form.titulo) }}
+	                       Título
 	                         {{ form_widget(form.titulo, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Nombre del Curso'} }) }}
 	                         <span class="text-danger"> {{ form_errors(form.titulo) }} </span>
                     	</div>
                          
                         <div class="form-group">
-	                         {{ form_label(form.descripcion) }}
-	                         {{ form_widget(form.descripcion, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Descripción'} }) }}
+	                         Link
+	                         {{ form_widget(form.descripcion, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Link'} }) }}
 	                         <span class="text-danger"> {{ form_errors(form.descripcion) }} </span>
                     	</div>
                         
-                        <div class="form-group">
-	                         {{ form_label(form.fechaini) }}
-	                         {{ form_widget(form.fechaini, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha Inicio'} }) }}
-	                         <span class="text-danger"> {{ form_errors(form.fechaini) }} </span>
-                    	</div>                            
+                     {#   <div class="form-group">#}
+	                    {#     {{ form_label(form.fechaini) }}#}
+	                    {#     {{ form_widget(form.fechaini, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha Inicio'} }) }}#}
+	                    {#     <span class="text-danger"> {{ form_errors(form.fechaini) }} </span>#}
+                    	{#</div>                            #}
                        
-                        <div class="form-group">
-	                         {{ form_label(form.fechafin) }}
-	                         {{ form_widget(form.fechafin, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha Fin'} }) }}
-	                         <span class="text-danger"> {{ form_errors(form.fechafin) }} </span>
-                    	</div>         
+                     {#   <div class="form-group">#}
+	                    {#     {{ form_label(form.fechafin) }}#}
+	                    {#     {{ form_widget(form.fechafin, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha Fin'} }) }}#}
+	                    {#     <span class="text-danger"> {{ form_errors(form.fechafin) }} </span>#}
+                    	{#</div>         #}
 		               
 				 	</fieldset>
                      
