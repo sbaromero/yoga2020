@@ -22,11 +22,29 @@ class CursoController extends Controller
             $cursos = $em->createQuery($dql);  
 
 
+        //combo de tipos de cuota
+        $repository = $this->getDoctrine()->getRepository('CYAYogaBundle:Tipocuota');
+        $query = $repository->createQueryBuilder('u')
+            ->where('1 = 1')
+            ->orderBy('u.nombre','ASC')
+            ->getQuery();
+        $cuotas = $query->getResult();
+     
+        $cuota = 0;
+        $cuotaQuery = $request->get('cuota'); 
+     
+        $cuotaelegida = $repository->findOneById($cuotaQuery);
+          
+        $nombrecuota = 'Elija un tipo de cuota';
+
+
+
+
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
         $cursos, $request->query->getInt('page' , 1), 10);
         
-        return $this->render('CYAYogaBundle:Curso:index.html.twig', array('pagination' => $pagination, 'cursos' => $cursos));
+        return $this->render('CYAYogaBundle:Curso:index.html.twig', array('pagination' => $pagination,  'cuotas' => $cuotas, 'cursos' => $cursos , 'elegida'=> $cuotaelegida ));
     }
     
     public function addAction(Request $request)

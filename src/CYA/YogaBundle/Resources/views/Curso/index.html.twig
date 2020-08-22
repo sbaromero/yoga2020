@@ -9,26 +9,50 @@
             <div class="row">
                 <div class="col-sm-5">
                     <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> &nbsp; 
-Cursos Online</h2>
+                 Cursos Online</h2>
                     <a href="{{ path('cya_curso_add') }}" class="head-link">
         			        <h3>
         			           <span><i class="icon ion-plus"></i></span>
-    			                Agregar Nuevo Curso
+    			                Agregar Nuevo Video o Archivo
         			         </h3>
         			    </a>
                 </div>
-                <div class="col-sm-7">
+                
+           {#      <div class="col-sm-7">#}
+           {#         <form method="get" action="" class="form-inline pull-right" role="search">#}
+        			{#</form>#}
+           {#     </div>#}
+                
+             <br> <br> <br>
+                
                     <form method="get" action="" class="form-inline pull-right" role="search">
+                        
+        				<div class="form-group">
+                            <select class="selectpicker" data-live-search="true" id="cuota" name="cuota" value="{{ app.request.get('cuota') }}">
+                                <option value="" selected disabled>(Elija Tipo de cuota)</option>
+                                {% for us in cuotas %}
+                                    <option value="{{ us.id }}">{{ us.nombre }}</option>
+                                {% endfor %}
+                             </select>
+                        </div>
+                        
+
+        				<input type="submit" value="Buscar" class="btn btn-success">
         			</form>
-        			
-        			
-                </div>
             </div>
         </div>
     </div>
+  
 	<div class="container">
+	    
 	    <div class="row">
-	    	
+	        
+	        {% if  elegida %} 
+	         <br>
+	        <h4> Curso elegido: <b> {{elegida.nombre}} </h4></b>
+	         <br>
+	     
+	   
 	    <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
@@ -73,7 +97,7 @@ Cursos Online</h2>
                         {% endfor %}
                     </tbody>
                 </table>
-           <H4> {% trans %}Total Cursos:{% endtrans %} {{ pagination.getTotalItemCount }}</H4>
+           <H4> {% trans %}Total Videos o Archivos:{% endtrans %} {{ pagination.getTotalItemCount }}</H4>
                 {# display navigation #}
                 <div class="navigation">
                     {{ knp_pagination_render(pagination) }}
@@ -81,4 +105,7 @@ Cursos Online</h2>
             </div>
         </div>
     </div>
+    
+    {% endif %}     
+    
 {% endblock %}
