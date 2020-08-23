@@ -9,7 +9,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Form\FormError;
 use CYA\YogaBundle\Entity\Curso;
+use CYA\YogaBundle\Entity\TipoCuota;
 use CYA\YogaBundle\Form\CursoType;
+
 
 class CursoController extends Controller
 {
@@ -54,11 +56,13 @@ class CursoController extends Controller
         $form = $this->createForm(CursoType::class, $curso);
         $form->handleRequest($request);
         
+        
         if ($form->isSubmitted() && $form->isValid()) {
             
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($curso);
                 $em->flush();
+            
                 
                 $this->addFlash('success', 'El Curso ha sido creado');
                 
@@ -68,12 +72,16 @@ class CursoController extends Controller
         return $this->render('CYAYogaBundle:Curso:add.html.twig', array('form' => $form->createView()));
     }
 
-   public function editAction($id, Request $request)
+   public function editAction($id,  Request $request)
    {
         $em = $this->getDoctrine()->getManager();
         $curso = $em->getRepository('CYAYogaBundle:Curso')->find($id);
         $form = $this->createForm(CursoType::class, $curso);
         $form->handleRequest($request); 
+        
+        $elegida=$em->getRepository('CYAYogaBundle:TipoCuota')->find($request->get('cursoid'));
+        
+        
         
         if(!$curso){
             throw $this->createNotFoundException('Curso no encontrado');
@@ -81,14 +89,15 @@ class CursoController extends Controller
        
         if ($form->isSubmitted() && $form->isValid()) {
             
+            $curso->setTipoCuota($elegida);
             $em->flush();
-            
             $this->addFlash('success', 'El curso ha sido modificado');
-            
             return $this->redirectToRoute('cya_curso_index');
         }
+        
+        $cursonombre=$request->get('cursonombre'); ;
        
-        return $this->render('CYAYogaBundle:Curso:edit.html.twig', array('curso' => $curso, 'form' => $form->createView()));
+        return $this->render('CYAYogaBundle:Curso:edit.html.twig', array('curso' => $curso, 'cursonombre' => $cursonombre,'form' => $form->createView()));
    }
 
  public function deleteAction($id, Request $request)

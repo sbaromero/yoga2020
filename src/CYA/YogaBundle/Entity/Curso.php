@@ -50,6 +50,20 @@ class Curso
     private $fechafin;
 
 
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Tipocuota")
+     * @ORM\JoinColumn(name="tipocuota_id", referencedColumnName="id")
+     */
+    protected $tipocuota;
+
+
+
+
+//getters y setters
+
+
+
     /**
      * Get id
      *
@@ -155,5 +169,36 @@ class Curso
     {
         return $this->fechafin;
     }
+    
+    
+    
+      /**
+     * Set tipocuota
+     *
+     * @param \CYA\YogaBundle\Entity\Tipocuota $tipocuota
+     *
+     * @return Curso
+     */
+    public function setTipocuota(\CYA\YogaBundle\Entity\Tipocuota $tipocuota = null)
+    {
+        $this->tipocuota = $tipocuota;
+
+        return $this;
+    }
+
+    /**
+     * Get tipocuota
+     *
+     * @return \CYA\YogaBundle\Entity\Tipocuota
+     */
+    public function getTipocuota()
+    {
+        return $this->tipocuota;
+    }
+    
+    
+    
+    
+    
 }
 

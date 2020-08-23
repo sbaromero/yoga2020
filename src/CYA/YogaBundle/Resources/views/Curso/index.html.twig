@@ -84,9 +84,13 @@
                                 {#<td>{{ curso.fechaini| date('d/m/Y') }}</td>#}
                                 {#<td>{{ curso.fechafin | date('d/m/Y')}}</td>#}
                                 <td class="actions">
-                                    <a href="{{ path('cya_curso_edit', {id: curso.id }) }}" class="btn btn-success" title="Editar">
+                                    <a href="{{ path('cya_curso_edit', {id: curso.id, cursoid: elegida.id, cursonombre: elegida.nombre }) }}" class="btn btn-success" title="Editar">
                                         {% trans %} <i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; 
  {% endtrans %}
+ 
+  
+ 
+ 
                                     </a>
                                     
                                       <a href="{{ path('cya_curso_delete', {id: curso.id }) }}" onclick="return confirm('Está seguro??')"
