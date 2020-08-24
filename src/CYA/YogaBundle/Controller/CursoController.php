@@ -19,12 +19,8 @@ class CursoController extends Controller
     {
         $searchQuery = $request->get('query');
 
-            $em = $this->getDoctrine()->getManager();
-            $dql = "SELECT r FROM CYAYogaBundle:Curso r ORDER BY r.id DESC";
-            $cursos = $em->createQuery($dql);  
 
-
-        //combo de tipos de cuota
+       //combo de tipos de cuota
         $repository = $this->getDoctrine()->getRepository('CYAYogaBundle:Tipocuota');
         $query = $repository->createQueryBuilder('u')
             ->where('1 = 1')
@@ -32,14 +28,26 @@ class CursoController extends Controller
             ->getQuery();
         $cuotas = $query->getResult();
      
-        $cuota = 0;
-        $cuotaQuery = $request->get('cuota'); 
-     
-        $cuotaelegida = $repository->findOneById($cuotaQuery);
+         $cuota = 0;
+         $cuotaQuery = $request->get('cuota'); 
+         $cuotaelegida = $repository->findOneById($cuotaQuery);
           
-        $nombrecuota = 'Elija un tipo de cuota';
+         $nombrecuota = 'Elija un tipo de cuota';
 
 
+
+         $em = $this->getDoctrine()->getManager();
+         $dql = "SELECT r FROM CYAYogaBundle:Curso r ";
+        
+         if ($cuotaQuery){
+         $dql = $dql . "where r.tipocuota = " . $cuotaQuery;
+         }
+        
+         $dql = $dql . " ORDER BY r.id DESC";
+         $cursos = $em->createQuery($dql);  
+
+
+    
 
 
         $paginator = $this->get('knp_paginator');
@@ -51,25 +59,28 @@ class CursoController extends Controller
     
     public function addAction(Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
         $curso = new Curso();
-        
         $form = $this->createForm(CursoType::class, $curso);
         $form->handleRequest($request);
         
-        
+       $elegida=$em->getRepository('CYAYogaBundle:TipoCuota')->find($request->get('cursoid'));
+         
         if ($form->isSubmitted() && $form->isValid()) {
             
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($curso);
+                $curso->setTipoCuota($elegida);
                 $em->flush();
             
                 
-                $this->addFlash('success', 'El Curso ha sido creado');
+                $this->addFlash('success', 'El Video/Archivo ha sido agregado con éxito');
                 
                 return $this->redirectToRoute('cya_curso_index');
         }
       
-        return $this->render('CYAYogaBundle:Curso:add.html.twig', array('form' => $form->createView()));
+        $cursonombre=$request->get('cursonombre'); ;
+        return $this->render('CYAYogaBundle:Curso:add.html.twig', array('curso' => $curso, 'cursonombre' => $cursonombre,'form' => $form->createView()));
     }
 
    public function editAction($id,  Request $request)
@@ -84,14 +95,14 @@ class CursoController extends Controller
         
         
         if(!$curso){
-            throw $this->createNotFoundException('Curso no encontrado');
+            throw $this->createNotFoundException('Video/Archivo no encontrado');
         }
        
         if ($form->isSubmitted() && $form->isValid()) {
             
             $curso->setTipoCuota($elegida);
             $em->flush();
-            $this->addFlash('success', 'El curso ha sido modificado');
+            $this->addFlash('success', 'El Video/Archivo ha sido modificado exitosamente');
             return $this->redirectToRoute('cya_curso_index');
         }
         
@@ -106,10 +117,10 @@ class CursoController extends Controller
         $curso = $em->getRepository('CYAYogaBundle:Curso')->find($id);
         $em->remove($curso);
         $em->flush();  
-        $successMessage = 'Curso eliminado';
+        $successMessage = 'Video/Archivo eliminado';
         $this->addFlash('success', $successMessage);
          }catch (\Exception $e) {
-           $this->addFlash('error', 'Imposible eliminar este Curso, verifique que no tenga materias asociadas.');
+           $this->addFlash('error', 'Imposible eliminar este Video/Archivo, verifique si se puede editar');
             }
         return $this->redirectToRoute('cya_curso_index');
     }

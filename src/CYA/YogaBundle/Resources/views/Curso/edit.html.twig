@@ -7,7 +7,7 @@
         <div class="container profesorado-icon">
             <div class="row">
                 <div class="col-sm-5">
-                    <h2>Editar Curso: {{cursonombre}}</h2>
+                    <h2>Editar Video/archivo para: <br><b>{{cursonombre}}</b></h2>
                 </div>
             </div>
         </div>
@@ -25,13 +25,13 @@
 						
 
 					    <div class="form-group">
-	                       Título
+	                      <b> Título del Video/Archivo </b>
 	                         {{ form_widget(form.titulo, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Nombre del Curso'} }) }}
 	                         <span class="text-danger"> {{ form_errors(form.titulo) }} </span>
                     	</div>
                          
                         <div class="form-group">
-	                         Link
+	                       <b>  Link del Video/Archivo </b>
 	                         {{ form_widget(form.descripcion, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Link'} }) }}
 	                         <span class="text-danger"> {{ form_errors(form.descripcion) }} </span>
                     	</div>
@@ -56,7 +56,7 @@
 		</div>
 		
 		<p>
-			{{ form_widget(form.save, {'label' : 'Modificar Curso', 'attr': {'class': 'btn btn-success'}}) }}
+			{{ form_widget(form.save, {'label' : 'Modificar Video/Archivo', 'attr': {'class': 'btn btn-success'}}) }}
 		</p>
                  
             {{ form_end(form) }}

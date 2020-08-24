@@ -22,8 +22,8 @@ class TipocuotaController extends Controller
 
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
-            $tipocuotas, $request->query->getInt('page' , 1),
-            10
+        $tipocuotas, $request->query->getInt('page' , 1),
+            100
         );
         
         return $this->render('CYAYogaBundle:Tipocuota:index.html.twig', array('pagination' => $pagination, 'tipocuotas' => $tipocuotas));

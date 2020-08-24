@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-sm-5">
                     <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> &nbsp; 
-                 Cursos Online</h2>
+                 Videos / Archivos </h2>
                {#     <a href="{{ path('cya_curso_add') }}" class="head-link">#}
         			    {#    <h3>#}
         			    {#       <span><i class="icon ion-plus"></i></span>#}
@@ -52,7 +52,7 @@
 	         <br>
 	         <h4> Curso elegido: <b> {{elegida.nombre}} </h4></b>
 	     
-	        <H4> {% trans %}Total Cargados:{% endtrans %} {{ pagination.getTotalItemCount }}</H4>
+	        <H4> {% trans %}Total videos/archivos cargados:{% endtrans %}<b> {{ pagination.getTotalItemCount }} </b></H4>
                 {# display navigation #}
                 <div class="navigation">
                     {{ knp_pagination_render(pagination) }}
@@ -86,11 +86,8 @@
                                 <td class="actions">
                                     <a href="{{ path('cya_curso_edit', {id: curso.id, cursoid: elegida.id, cursonombre: elegida.nombre }) }}" class="btn btn-success" title="Editar">
                                         {% trans %} <i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; 
- {% endtrans %}
- 
-  
- 
- 
+                                       {% endtrans %}
+
                                     </a>
                                     
                                       <a href="{{ path('cya_curso_delete', {id: curso.id }) }}" onclick="return confirm('Está seguro??')"
@@ -111,7 +108,7 @@
                     
                     
                 </table>
-                         <a href="{{ path('cya_curso_add') }}" class="link">
+                         <a href="{{ path('cya_curso_add', {cursoid: elegida.id, cursonombre: elegida.nombre} ) }}" class="link">
         			        <h4>
         			           <span><i class="icon ion-plus"></i></span>
     			                Agregar Nuevo Video / Archivo
