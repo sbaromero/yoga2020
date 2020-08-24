@@ -43,7 +43,7 @@ class CursoController extends Controller
          $dql = $dql . "where r.tipocuota = " . $cuotaQuery;
          }
         
-         $dql = $dql . " ORDER BY r.id DESC";
+         $dql = $dql . " ORDER BY r.id ";
          $cursos = $em->createQuery($dql);  
 
 
@@ -65,6 +65,7 @@ class CursoController extends Controller
         $form->handleRequest($request);
         
        $elegida=$em->getRepository('CYAYogaBundle:TipoCuota')->find($request->get('cursoid'));
+       $elegidaid= $request->get('cursoid');
          
         if ($form->isSubmitted() && $form->isValid()) {
             
@@ -76,7 +77,7 @@ class CursoController extends Controller
                 
                 $this->addFlash('success', 'El Video/Archivo ha sido agregado con éxito');
                 
-                return $this->redirectToRoute('cya_curso_index');
+                return $this->redirectToRoute('cya_curso_index',array('cuota' => $elegidaid));
         }
       
         $cursonombre=$request->get('cursonombre'); ;
@@ -91,7 +92,7 @@ class CursoController extends Controller
         $form->handleRequest($request); 
         
         $elegida=$em->getRepository('CYAYogaBundle:TipoCuota')->find($request->get('cursoid'));
-        
+        $elegidaid=$request->get('cursoid');
         
         
         if(!$curso){
@@ -103,7 +104,7 @@ class CursoController extends Controller
             $curso->setTipoCuota($elegida);
             $em->flush();
             $this->addFlash('success', 'El Video/Archivo ha sido modificado exitosamente');
-            return $this->redirectToRoute('cya_curso_index');
+            return $this->redirectToRoute('cya_curso_index',array('cuota' => $elegidaid));
         }
         
         $cursonombre=$request->get('cursonombre'); ;
