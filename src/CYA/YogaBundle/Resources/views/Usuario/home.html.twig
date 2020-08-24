@@ -177,7 +177,21 @@
 	
 	{% if is_granted('ROLE_USER') %}
 	<div class="container home">
+			    		 <br>
+	            	<b> Mensajes para {{ app.user.nombrecompleto}} </b> <br><br>
+		           {% if app.user.tipocuota.mensaje %}
+		           Para el curso actual (<i>{{ app.user.tipocuota.nombre}}</i>) : <i>"{{ app.user.tipocuota.mensaje}}"</i> <br><br>
+		           	{% endif %}
+		           {% if app.user.mensaje %}
+		           Mensaje de Administración: <i>"{{ app.user.mensaje}}"</i>
+		           {% endif %}
+	    	
+	    	
+	    	<br><br>
+	    	
 	    <div class="row">
+	    	
+
 	        <a href="{{ path('cya_usuario_editpublic') }}">
     	        <div class="col-sm-6 alumnos">
     	            <i class="icon ion-android-people"></i>
@@ -190,15 +204,19 @@
 	            <h2>CTA. CORRIENTE</h2>
 	        </div>
 	        </a>
+	         
+	          <a href="{{ path('cya_curso_index',{ cuota: app.user.tipocuota.id} ) }}">
+	          <div class="col-sm-6 profesorado">
+	            <i class="icon ion-card"></i>
+	            <h2>Cursos Online</h2>
+	        </div>
+	        </a>
+	        
+	        
+	        
 	    </div>
-		 <br>
-		<b> Mensajes para {{ app.user.nombrecompleto}} </b> <br><br>
-		           {% if app.user.tipocuota.mensaje %}
-		           Para el curso actual (<i>{{ app.user.tipocuota.nombre}}</i>) : <i>"{{ app.user.tipocuota.mensaje}}"</i> <br><br>
-		           	{% endif %}
-		           {% if app.user.mensaje %}
-		           Mensaje de Administración: <i>"{{ app.user.mensaje}}"</i>
-		           {% endif %}
+		
+	        	
 	</div>
 	{% endif %}
 	

@@ -10,21 +10,14 @@
                 <div class="col-sm-5">
                     <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> &nbsp; 
                  Videos / Archivos </h2>
-               {#     <a href="{{ path('cya_curso_add') }}" class="head-link">#}
-        			    {#    <h3>#}
-        			    {#       <span><i class="icon ion-plus"></i></span>#}
-    			        {#        Agregar Nuevo Video o Archivo#}
-        			    {#     </h3>#}
-        			    {#</a>#}
+
                 <br><br>
                 </div>
                 
-           {#      <div class="col-sm-7">#}
-           {#         <form method="get" action="" class="form-inline pull-right" role="search">#}
-        			{#</form>#}
-           {#     </div>#}
                 
              <br> <br> <br>
+                
+                	{% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN') %}
                 
                     <form method="get" action="" class="form-inline pull-right" role="search">
                         
@@ -40,6 +33,8 @@
 
         				<input type="submit" value="Buscar" class="btn btn-success">
         			</form>
+        			
+        				{% endif %}
             </div>
         </div>
     </div>
@@ -50,7 +45,7 @@
 	        
 	        {% if  elegida %} 
 	         <br>
-	         <h4> Curso elegido: <b> {{elegida.nombre}} </h4></b>
+	         <h4> Curso: <b> {{elegida.nombre}} </h4></b>
 	     
 	        <H4> {% trans %}Total videos/archivos cargados:{% endtrans %}<b> {{ pagination.getTotalItemCount }} </b></H4>
                 {# display navigation #}
@@ -64,13 +59,16 @@
                     <thead>
                         <tr>
 
-							<th>{{ knp_pagination_sortable(pagination, 'Código', 'r.id') }}</th>
+							{#<th>{{ knp_pagination_sortable(pagination, 'Código', 'r.id') }}</th>#}
 							<th>{{ knp_pagination_sortable(pagination, 'Nombre del Video/Archivo', 'r.titulo') }} </th>
 							<th>{{ knp_pagination_sortable(pagination, 'Link', 'r.descripcion') }} </th>
+						
 							{#<th>{{ knp_pagination_sortable(pagination, 'Fecha inicio', 'r.fechaini') }} </th>#}
 							{#<th>{{ knp_pagination_sortable(pagination, 'Fecha Fin', 'r.fechafin') }} </th>#}
 						
+							{% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN') %}
                             <th>Acciones</th>
+                        	{% endif %}
                             
                         </tr>
                     </thead>
@@ -78,11 +76,18 @@
                         {% for curso in pagination %}
                             <tr data-id="{{ curso.id }}">
                                 
-                                <td>{{ curso.id }}</td>
+                                {#<td>{{ curso.id }}</td>#}
                                 <td>{{ curso.titulo }}</td>
-                                <td>{{ curso.descripcion }}</td>
+                                <td> <a href="{{curso.descripcion}}" class="link" target="_blank" title="Abrir link" > Abrir enlace </a> </td>
+                             
+                                
+                                
                                 {#<td>{{ curso.fechaini| date('d/m/Y') }}</td>#}
                                 {#<td>{{ curso.fechafin | date('d/m/Y')}}</td>#}
+                                
+                                
+                                {% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN') %}
+                                
                                 <td class="actions">
                                     <a href="{{ path('cya_curso_edit', {id: curso.id, cursoid: elegida.id, cursonombre: elegida.nombre }) }}" class="btn btn-success" title="Editar">
                                         {% trans %} <i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; 
@@ -97,7 +102,7 @@
 
 			                        </a>
                                     
-                                    
+                                    	{% endif %}
                                     
                                 </td>
                             </tr>
@@ -108,13 +113,20 @@
                     
                     
                 </table>
+                
+                	{% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN') %}
                          <a href="{{ path('cya_curso_add', {cursoid: elegida.id, cursonombre: elegida.nombre} ) }}" class="link">
         			        <h4>
         			           <span><i class="icon ion-plus"></i></span>
     			                Agregar Nuevo Video / Archivo
         			         </h4>
         			    </a>
+        		 {% endif %}    
+        			    
                 <br><br>
+           
+           
+           
            
         
            {#<H4> {% trans %}Total Videos / Archivos:{% endtrans %} {{ pagination.getTotalItemCount }}</H4>#}
