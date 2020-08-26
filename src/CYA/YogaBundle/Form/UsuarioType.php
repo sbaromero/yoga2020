@@ -15,6 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use CYA\YogaBundle\Entity\Tipocuota;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 
 
 class UsuarioType extends AbstractType
@@ -67,6 +68,7 @@ class UsuarioType extends AbstractType
                     'placeholder'  => 'Seleccione un tipo de cuota',
                 ))
                ->add('mensaje',TextType::class, array('required' => false)  )
+                ->add('bonificacion',MoneyType::class, array('currency' => '%'))
             ->add('save', SubmitType::class)   
         ; 
     }

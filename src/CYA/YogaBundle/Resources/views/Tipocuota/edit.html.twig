@@ -23,7 +23,7 @@
 						
 						<div class="col-sm-4">
 			                <div class="form-group">
-			                     Nombre
+			                    <b> Nombre de la Cuota </b>
 			                     {{ form_widget(form.nombre, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Nombre'} }) }}
 			                     <span class="text-danger"> {{ form_errors(form.nombre) }} </span>
 			               </div>
@@ -31,7 +31,7 @@
 			            
 			            <div class="col-sm-4"> 
 			                <div class="form-group">
-			                     Valor
+			                    <b> Valor </b>
 			                     {{ form_widget(form.valor, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Valor'} }) }}
 			                     <span class="text-danger"> {{ form_errors(form.valor) }} </span>
 			                </div>
@@ -55,9 +55,17 @@
           <div class="row">
               
              <div class="col-sm-6">
-                     <label> Tipo
+                 <label>  <b>   Tipo (Curso/Clase) </b>
                          {{ form_widget(form.escurso) }}
                          <span class="text-danger"> {{ form_errors(form.escurso) }} </span>
+                     </label>
+             </div>
+             
+             
+                          <div class="col-sm-6">
+                     <label><b> Estado de la Cuota </b>
+                         {{ form_widget(form.activa) }}
+                         <span class="text-danger"> {{ form_errors(form.activa) }} </span>
                      </label>
              </div>
                   

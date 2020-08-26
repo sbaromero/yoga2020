@@ -48,6 +48,10 @@ class Tipocuota
      */
     private $valor;
 
+  
+
+
+
     /**
      * @var bool
      *
@@ -64,6 +68,13 @@ class Tipocuota
      */
     private $mensaje;
 
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="activa", type="boolean",nullable=true)
+     */
+    private $activa;
 
 
 
@@ -125,6 +136,14 @@ class Tipocuota
     {
         return $this->valor;
     }
+
+   
+   
+  
+
+   
+   
+  
 
    
 
@@ -212,7 +231,29 @@ class Tipocuota
     }
     
     
- 
+    /**
+     * Set activa
+     *
+     * @param boolean $activa
+     *
+     * @return Usuario
+     */
+    public function setActiva($activa)
+    {
+        $this->activa = $activa;
+
+        return $this;
+    }
+
+    /**
+     * Get activa
+     *
+     * @return bool
+     */
+    public function getActiva()
+    {
+        return $this->activa;
+    }
     
     
     

@@ -210,6 +210,15 @@ class Usuario implements AdvancedUserInterface, \Serializable
 
 
 
+     /**
+     * @var float
+     *
+     * @ORM\Column(name="bonificacion", type="float")
+     */
+    private $bonificacion;
+
+
+
     public function getBrochure()
     {
         return $this->brochure;
@@ -877,5 +886,30 @@ class Usuario implements AdvancedUserInterface, \Serializable
 
    
     
+    
+    
+       /**
+     * Set bonificacion
+     *
+     * @param float $bonificacion
+     *
+     * @return Usuario
+     */
+    public function setBonificacion($bonificacion)
+    {
+        $this->bonificacion = $bonificacion;
+
+        return $this;
+    }
+
+    /**
+     * Get bonificacion
+     *
+     * @return float
+     */
+    public function getBonificacion()
+    {
+        return $this->bonificacion;
+    }
     
 }

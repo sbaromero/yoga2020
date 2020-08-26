@@ -63,6 +63,17 @@ class TipocuotaController extends Controller
        
         if ($form->isSubmitted() && $form->isValid()) {
             
+            
+            if ($tipocuota->getActiva()==0)
+            {
+                      $this->addFlash('notice', 'Se desactivó la cuota: '.$tipocuota->getNombre());
+                      //Recorrer los alumnos y pasarlos a otra tabla
+                      
+                      
+                      
+                      
+            }
+            
             $em->flush();
             
             $this->addFlash('success', 'El tipo de cuota ha sido modificado');
