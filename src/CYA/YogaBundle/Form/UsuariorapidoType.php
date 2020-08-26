@@ -31,6 +31,7 @@ class UsuariorapidoType extends AbstractType
             ->add('nombre',TextType::class)
             ->add('apellido',TextType::class)
             ->add('dni',TextType::class)
+             ->add('telefono',TextType::class)
             ->add('password', PasswordType::class)
             ->add('tipocuota', EntityType::class, array('class' => 'CYAYogaBundle:Tipocuota','query_builder' => function (EntityRepository $er) 
                     { return $er->createQueryBuilder('t')

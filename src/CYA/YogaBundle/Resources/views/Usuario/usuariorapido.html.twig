@@ -64,6 +64,15 @@
                          <span class="text-danger"> {{ form_errors(form.apellido) }} </span>
                      </div>
             </div>
+            
+                        <div class="col-sm-4"> 
+                     <div class="form-group">
+                         {{ form_label(form.telefono) }}
+                         {{ form_widget(form.telefono, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Teléfono'} }) }}
+                         <span class="text-danger"> {{ form_errors(form.apellido) }} </span>
+                     </div>
+            </div>
+            
 
         </div>
 
