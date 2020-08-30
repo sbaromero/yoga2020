@@ -16,7 +16,7 @@ class TipocuotaController extends Controller
     {
         
             $em = $this->getDoctrine()->getManager();
-            $dql = "SELECT t.id,t.nombre, t.valor, t.escurso, COUNT(u.id) as cantidad FROM CYAYogaBundle:Tipocuota t left join CYAYogaBundle:Usuario u WHERE u.isActive = true and u.tipocuota = t.id group by t ORDER BY t.escurso";
+            $dql = "SELECT t.id,t.nombre, t.valor, t.escurso, COUNT(u.id) as cantidad, t.activa FROM CYAYogaBundle:Tipocuota t left join CYAYogaBundle:Usuario u WHERE u.isActive = true and u.tipocuota = t.id group by t ORDER BY t.escurso";
             $tipocuotas = $em->createQuery($dql);  
         
 

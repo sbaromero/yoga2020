@@ -236,7 +236,7 @@ class Tipocuota
      *
      * @param boolean $activa
      *
-     * @return Usuario
+     * @return Tipocuota
      */
     public function setActiva($activa)
     {
