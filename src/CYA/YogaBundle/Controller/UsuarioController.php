@@ -571,7 +571,7 @@ class UsuarioController extends Controller
             }
             
             if(!empty($tcQuery)){
-                $dql = $dql . " AND u.tipocuota = (SELECT t FROM CYAYogaBundle:Tipocuota t WHERE t.id = " . $tcQuery .")";
+                $dql = $dql . " AND u.tipocuota = (SELECT t FROM CYAYogaBundle:Tipocuota t WHERE  t.id = " . $tcQuery .")";
             }
             
              if(!empty($usuarioQuery)){
@@ -589,7 +589,12 @@ class UsuarioController extends Controller
         
         $em2 = $this->getDoctrine()->getManager();
       
-        $tipocuotas = $em2->getRepository('CYAYogaBundle:Tipocuota')->findBy(array(), array('nombre' => 'ASC'));
+        $tipocuotas = $em2->getRepository('CYAYogaBundle:Tipocuota')->findBy(array('activa'=>'1'), array('nombre' => 'ASC'));
+        
+        
+        
+        
+        
         
        // $this->addFlash('notice', 'Presione sobre el ícono azul para inscribir al usuario a materias');
         

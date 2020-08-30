@@ -67,14 +67,23 @@
           <div class="row">
               
              <div class="col-sm-6">
-                     <label> Tipo
+                     <label> <b> Tipo </b>
                          {{ form_widget(form.escurso) }}
                          <span class="text-danger"> {{ form_errors(form.escurso) }} </span>
                      </label>
              </div>
                   
-          </div>
+         
           
+                          <div class="col-sm-6">
+                     <label><b> Estado de la Cuota </b>
+                         {{ form_widget(form.activa) }}
+                         <span class="text-danger"> {{ form_errors(form.activa) }} </span>
+                     </label>
+             </div>
+          
+          
+          <br>
 <br>
 <br>
             <div class="col-sm-6">

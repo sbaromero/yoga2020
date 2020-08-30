@@ -61,23 +61,54 @@ class TipocuotaController extends Controller
             throw $this->createNotFoundException('Tipo de cuota no encontrado');
         }
        
+       
         if ($form->isSubmitted() && $form->isValid()) {
             
             
-            if ($tipocuota->getActiva()==0)
+        $cuotaguion = $em->getRepository('CYAYogaBundle:Tipocuota')->find(23);
+                    
+        if ($tipocuota->getId() == $cuotaguion->getId())
             {
+                $this->addFlash('error', 'No se puede modificar este tipo de cuota ');
+                          
+             }
+            
+            else //es cualquiera de las permitidas no guion
+            {
+            
+             
+               if ($tipocuota->getActiva()==0) //quiero desactivar la cuota
+                {
                       $this->addFlash('notice', 'Se desactivó la cuota: '.$tipocuota->getNombre());
                       //Recorrer los alumnos y pasarlos a otra tabla
                       
+                       $repository = $this->getDoctrine()->getRepository('CYAYogaBundle:Usuario');
+                      $query = $repository->createQueryBuilder('u')
+                      ->where('u.tipocuota = '.$tipocuota->getId())
+                      ->getQuery();
+                      $usuariot = $query->getResult();
                       
+                    foreach($usuariot as $usu){ //elimino todos los usuarios de esa cuota
+                     
+                        //inserto los que se van a borrar en la tabla nueva TipoCuotaBorrada
+                       
+                     
+                        $this->addFlash('notice', 'Se quitará de este tipo de cuota al usuario: '.$usu->getNombre());
+                        $cuotaguion = $em->getRepository('CYAYogaBundle:Tipocuota')->find(23);
+                        $usu->setTipocuota($cuotaguion);
+                        $em = $this->getDoctrine()->getManager();
+                        $em->persist($usu);
+                        $em->flush(); 
+                                               }
                       
-                      
+              }
+            
+               $em->flush();
+               $this->addFlash('success', 'Tipo de cuota modificada con éxito ');
+
+            
             }
-            
-            $em->flush();
-            
-            $this->addFlash('success', 'El tipo de cuota ha sido modificado');
-            
+             
             return $this->redirectToRoute('cya_tipocuota_index');
         }
        
