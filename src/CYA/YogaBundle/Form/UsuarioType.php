@@ -68,7 +68,7 @@ class UsuarioType extends AbstractType
                     'placeholder'  => 'Seleccione un tipo de cuota',
                 ))
                ->add('mensaje',TextType::class, array('required' => false)  )
-                ->add('bonificacion',MoneyType::class, array('currency' => '%'))
+                 ->add('bonificacion',TextType::class, array('required' => false)  )
             ->add('save', SubmitType::class)   
         ; 
     }

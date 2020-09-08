@@ -66,7 +66,7 @@ class UsuarioeditType extends AbstractType
                
               ->add('brochure', FileType::class, array('disabled'=>true, 'mapped'=>false, 'required' => false,'label' => 'Avatar (Archivo .jpg)' ))
              ->add('mensaje',TextType::class, array('required' => false)  )
-                 ->add('bonificacion',MoneyType::class, array('currency' => '%'))
+              ->add('bonificacion',TextType::class, array('required' => false)  )
              ->add('save', SubmitType::class)   
         ; 
     }

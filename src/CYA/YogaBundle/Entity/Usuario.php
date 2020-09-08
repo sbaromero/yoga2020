@@ -210,10 +210,10 @@ class Usuario implements AdvancedUserInterface, \Serializable
 
 
 
-     /**
-     * @var float
+    /**
+     * @var string
      *
-     * @ORM\Column(name="bonificacion", type="float")
+     * @ORM\Column(name="bonificacion", type="string", length=255, unique=false, nullable=true)
      */
     private $bonificacion;
 
@@ -891,7 +891,7 @@ class Usuario implements AdvancedUserInterface, \Serializable
        /**
      * Set bonificacion
      *
-     * @param float $bonificacion
+     * @param string $bonificacion
      *
      * @return Usuario
      */
@@ -905,7 +905,7 @@ class Usuario implements AdvancedUserInterface, \Serializable
     /**
      * Get bonificacion
      *
-     * @return float
+     * @return string
      */
     public function getBonificacion()
     {
