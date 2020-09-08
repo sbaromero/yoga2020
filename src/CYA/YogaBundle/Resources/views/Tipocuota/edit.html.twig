@@ -2,98 +2,109 @@
 
 {% block body %}
     {{ parent() }}
-    {{ include('CYAYogaBundle:Tipocuota:messages/success.html.twig') }}
     <div class="container-fluid alumnos">
         <div class="container alumnos-icon">
             <div class="row">
                 <div class="col-sm-5">
-					<h2><i class="fa fa-credit-card" aria-hidden="true"></i> Editar tipo de cuota</h2>
-				</div>
-		    </div>
+                    <h2><i class="fa fa-credit-card"></i>&nbsp; Modificar Tipo de Cuota</h2>
+                    <a href="{{ path('cya_tipocuota_index') }}" class="head-link">
+    			        <h3>
+    			           <span><i class="icon ion-android-arrow-dropleft back"></i></span>
+    			            regresar al listado
+    			         </h3>
+    			    </a>
+                </div>
             </div>
         </div>
-    </div>	
-			
-			  <div class="container grey-input">
+    </div>
+    
+    
+    {{ form_start(form, {'attr' : {'role' : 'form'}, 'action':'', 'method':'POST' }) }}
+           
+     <div class="container grey-input">
         <div class="row">
-				{{ form_start(form, {'attr': { 'role' : 'form'}}) }}
-				<h4 class="text-danger">{{ form_errors(form) }}</h4>
-                     
-					<fieldset>
-						
-						<div class="col-sm-4">
-			                <div class="form-group">
-			                    <b> Nombre de la Cuota </b>
-			                     {{ form_widget(form.nombre, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Nombre'} }) }}
-			                     <span class="text-danger"> {{ form_errors(form.nombre) }} </span>
-			               </div>
-			            </div>
-			            
-			            <div class="col-sm-4"> 
-			                <div class="form-group">
-			                    <b> Valor </b>
-			                     {{ form_widget(form.valor, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Valor'} }) }}
-			                     <span class="text-danger"> {{ form_errors(form.valor) }} </span>
-			                </div>
-			            </div>
-			            
-			             <br><br>  <br><br>  <br><br>  <br><br>
-          
-            <div class="col-sm-12">
+            <div class="col-sm-4">
                 <div class="form-group">
-                <b> Cambie el mensaje para todos los Alumnos de este Curso/Actividad: </b> 
+                   <b>  Nombre del Tipo de Cuota / Curso </b>
+                     {{ form_widget(form.nombre, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Nombre del Tipo de Cuota / Curso'} }) }}
+                     <span class="text-danger"> {{ form_errors(form.nombre) }} </span>
+               </div>
+            </div>
+         </div>   
+       
+            
+            
+          <div class="row">   
+            <div class="col-sm-2"> 
+                <div class="form-group">
+                   <b>  Valor </b>
+                     {{ form_widget(form.valor, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Valor'} }) }}
+                     <span class="text-danger"> {{ form_errors(form.valor) }} </span>
+                </div>
+            </div>
+    </div> 
+           
+           
+           
+{#          <br><br>#}
+          <div class="row">
+            <div class="col-sm-9">
+                <div class="form-group">
+                <b> Ingrese un mensaje para todos los Alumnos de este Curso/Actividad: </b> 
                      {{ form_widget(form.mensaje, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Mensaje'} }) }}
                      <span class="text-danger"> {{ form_errors(form.mensaje) }} </span>
                </div>
             </div>
-            
-            
-			            
-			        
-			            
-			         <br><br><br><br><br><br>
+          </div>
+          
+          
+          
+{#            <br><br><br>#}
+           
+           
           <div class="row">
-              
              <div class="col-sm-6">
-                 <label>  <b>   Tipo (Curso/Clase) </b>
+                     <label> <b> Tipo </b><br>
                          {{ form_widget(form.escurso) }}
                          <span class="text-danger"> {{ form_errors(form.escurso) }} </span>
                      </label>
              </div>
-             
-             
-                          <div class="col-sm-6">
-                     <label><b> Estado de la Cuota </b>
-                         {{ form_widget(form.activa) }}
-                         <span class="text-danger"> {{ form_errors(form.activa) }} </span>
-                     </label>
-             </div>
+      </div>
                   
-          </div>
-          
-       
-      <br><br>
-                 
-                   {#<b> Ingrese un mensaje para este alumno: </b> #}
-                   {#  {{ form_widget(form.mensaje, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Mensaje'} }) }}#}
-                   {#  <span class="text-danger"> {{ form_errors(form.mensaje) }} </span>              #}
-            
-          
-          
-          
-          <br><br><br>
-          
-			            
-				 	</fieldset>
+ <br>
+          <div class="row">
+           <div class="col-sm-6">
+                            <label><b> Estado de la Cuota </b> <br>
+                            {{ form_widget(form.activa) }}
+                            <span class="text-danger"> {{ form_errors(form.activa) }} </span>
+                           </label>
+                         </div>    
+                </div>
+                        
                      
-<br>
-
-            <div class="col-sm-6">
-                {{ form_widget(form.save, {'label' : 'Modificar Tipo de Cuota', 'attr': {'class': 'btn alumnos-btn'} }) }}
+                         
+      <div class="row">
+          <div class="col-sm-4">
+                 <div class="form-group">
+                    <b>   Fecha de Vencimiento </b>
+					         {{ form_widget(form.fechavenc, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha Vencimiento'} }) }}
+                       <span class="text-danger"> {{ form_errors(form.fechavenc) }} </span>
+                           </div>       
+                    </div>     
             </div>
-                   
-				{{ form_end(form) }}
-			</div>
-		</div>
-	</div>
+                        
+                       
+          
+          
+{#          <br>#}
+<br>
+<br>
+            <div class="col-sm-6">
+                {{ form_widget(form.save, {'label' : 'Modificar tipo de cuota', 'attr': {'class': 'btn alumnos-btn'} }) }}
+            </div>
+            
+            {{ form_end(form) }}
+     {#    </div>#}
+     </div>
 {% endblock %}
+
