@@ -1034,9 +1034,33 @@ class UsuarioController extends Controller
        }//while
        
         $mensaje = 'Se acaban de generar ' . $acum . ' cuotas de usuario nuevas por vencimientos de cuotas del día de hoy.';
-           if ($this->get('security.token_storage')->getToken()->getUser()->getRol() != 'ROLE_USER'){
+           if ($this->get('security.token_storage')->getToken()->getUser()->getRol() != 'ROLE_USER' && $acum >= 1 ){
                 $this->addFlash('notice', $mensaje);
             }
+   
+   
+    //busqueda de cuotas vencidas
+    
+    
+     //obtiene valor CUOTAS//////////////////////////////////////////////////////////////////
+        $cuotasactivas = $this->getDoctrine()->getRepository('CYAYogaBundle:Tipocuota');
+        $querycuotasactivas = $repoasoc->createQueryBuilder('l')
+            ->where('l.activa = :valor')
+            ->setParameter('valor', '1')
+            ->getQuery();
+            
+        $arraycuotas = $querycuotasactivas->getResult();
+        foreach($arraycuotas as $usa){
+   
+           if ($usa->getFechavenc() <  $fechahoy &&$usa->getFechavenc() != null ){
+            
+            $mensaje = 'Se venció la fecha de: ' . strtoupper($usa->getNombre()). '. Debe ingresar al tipo de cuota y proponer un nuevo VALOR y una nueva FECHA DE VENCIMIENTO';
+            $this->addFlash('notice', $mensaje);
+                                            }
+            }
+   
+   
+   
     }
     
     
