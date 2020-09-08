@@ -23,18 +23,18 @@
            
      <div class="container grey-input">
         <div class="row">
-            
             <div class="col-sm-4">
                 <div class="form-group">
-                   <b>  Nombre </b
-                     {{ form_widget(form.nombre, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Nombre'} }) }}
+                   <b>  Nombre del Tipo de Cuota / Curso </b>
+                     {{ form_widget(form.nombre, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Nombre del Tipo de Cuota / Curso'} }) }}
                      <span class="text-danger"> {{ form_errors(form.nombre) }} </span>
                </div>
             </div>
+         </div>   
+       
             
             
-            
-            
+          <div class="row">   
             <div class="col-sm-4"> 
                 <div class="form-group">
                    <b>  Valor </b>
@@ -42,12 +42,12 @@
                      <span class="text-danger"> {{ form_errors(form.valor) }} </span>
                 </div>
             </div>
-           </div> 
+    </div> 
            
            
            
-          <br><br>
-          
+{#          <br><br>#}
+          <div class="row">
             <div class="col-sm-9">
                 <div class="form-group">
                 <b> Ingrese un mensaje para todos los Alumnos de este Curso/Actividad: </b> 
@@ -55,47 +55,48 @@
                      <span class="text-danger"> {{ form_errors(form.mensaje) }} </span>
                </div>
             </div>
+          </div>
           
           
           
-          
-            <br><br><br>
+{#            <br><br><br>#}
            
            
-           
-           <br><br><br>
           <div class="row">
-              
              <div class="col-sm-6">
-                     <label> <b> Tipo </b>
+                     <label> <b> Tipo </b><br>
                          {{ form_widget(form.escurso) }}
                          <span class="text-danger"> {{ form_errors(form.escurso) }} </span>
                      </label>
              </div>
+      </div>
                   
-         
-          
-                          <div class="col-sm-6">
-                            <label><b> Estado de la Cuota </b>
+ <br>
+          <div class="row">
+           <div class="col-sm-6">
+                            <label><b> Estado de la Cuota </b> <br>
                             {{ form_widget(form.activa) }}
                             <span class="text-danger"> {{ form_errors(form.activa) }} </span>
                            </label>
-                         </div>
+                         </div>    
+                </div>
                         
+                     
                          
-                         
-                  <div class="row">
-                  <div class="col-sm-4">
+      <div class="row">
+          <div class="col-sm-4">
                  <div class="form-group">
-                <b>   Fecha de Vencimiento </b>
+                    <b>   Fecha de Vencimiento </b>
 					         {{ form_widget(form.fechavenc, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha Vencimiento'} }) }}
                        <span class="text-danger"> {{ form_errors(form.fechavenc) }} </span>
-                           </div>       </div>      </div>
+                           </div>       
+                    </div>     
+            </div>
                         
                        
           
           
-          <br>
+{#          <br>#}
 <br>
 <br>
             <div class="col-sm-6">
@@ -103,7 +104,7 @@
             </div>
             
             {{ form_end(form) }}
-         </div>
+     {#    </div>#}
      </div>
 {% endblock %}
 

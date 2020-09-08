@@ -24,8 +24,8 @@ class TipocuotaType extends AbstractType
             ->add('valor',MoneyType::class, array('currency' => 'ARS'))
             ->add('escurso', CheckboxType::class, array('required' => false,'attr' =>array ('class'=>'inputswitch','data-on-text'=>'Curso','data-off-text'=>'Clase'))) 
             ->add('mensaje',TextType::class, array('required' => false)  )
-             ->add('activa', CheckboxType::class, array('required' => false,'attr' =>array ('class'=>'inputswitch','data-on-text'=>'Activada','data-off-text'=>'Desactivada')))
-             ->add('fechavenc', DateType::class, array('widget' => 'single_text','attr' => ['class' => 'js-datepicker'],))
+            ->add('activa', CheckboxType::class, array('required' => false,'attr' =>array ('class'=>'inputswitch','data-on-text'=>'Activada','data-off-text'=>'Desactivada')))
+            ->add('fechavenc', DateType::class, array('widget' => 'single_text','attr' => ['class' => 'js-datepicker'],))
              
             // ->add('instructorado', CheckboxType::class, array('required' => false, 'attr' => array ('class'=>'inputswitch','data-on-text'=>'SI','data-off-text'=>'NO'))) 
             // ->add('clasesyoga', CheckboxType::class, array('required' => false, 'attr' => array ('class'=>'inputswitch','data-on-text'=>'SI','data-off-text'=>'NO'))) 
