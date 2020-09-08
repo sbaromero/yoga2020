@@ -76,11 +76,23 @@
          
           
                           <div class="col-sm-6">
-                     <label><b> Estado de la Cuota </b>
-                         {{ form_widget(form.activa) }}
-                         <span class="text-danger"> {{ form_errors(form.activa) }} </span>
-                     </label>
-             </div>
+                            <label><b> Estado de la Cuota </b>
+                            {{ form_widget(form.activa) }}
+                            <span class="text-danger"> {{ form_errors(form.activa) }} </span>
+                           </label>
+                         </div>
+                        
+                         
+                         
+                  <div class="row">
+                  <div class="col-sm-4">
+                 <div class="form-group">
+                <b>   Fecha de Vencimiento </b>
+					         {{ form_widget(form.fechavenc, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Fecha Vencimiento'} }) }}
+                       <span class="text-danger"> {{ form_errors(form.fechavenc) }} </span>
+                           </div>       </div>      </div>
+                        
+                       
           
           
           <br>

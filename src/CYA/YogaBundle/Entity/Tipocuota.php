@@ -78,6 +78,14 @@ class Tipocuota
 
 
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechavenc", type="datetime", nullable=true)
+     */
+    private $fechavenc;
+
+
 
     /**
      * Get id
@@ -256,6 +264,30 @@ class Tipocuota
     }
     
     
+    
+     /**
+     * Set vechavenc
+     *
+     * @param \DateTime $fechavenc
+     *
+     * @return Tipocuota
+     */
+    public function setFechavenc($fechavenc)
+    {
+        $this->fechavenc = $fechavenc;
+
+        return $this;
+    }
+
+    /**
+     * Get fechavenc
+     *
+     * @return \DateTime
+     */
+    public function getFechavenc()
+    {
+        return $this->fechavenc;
+    }
     
     
 }
