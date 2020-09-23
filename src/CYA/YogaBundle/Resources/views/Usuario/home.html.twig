@@ -182,16 +182,16 @@
 	{% if is_granted('ROLE_USER') %}
 	<div class="container home">
 			    		 <br>
-	            	<b> Mensajes para {{ app.user.nombrecompleto}} </b> <br><br>
+	     <h2>      	<b> Mensajes para {{ app.user.nombrecompleto}}: </b> <br> </h2>
 		           {% if app.user.tipocuota.mensaje %}
-		           Para el curso actual (<i>{{ app.user.tipocuota.nombre}}</i>) : <i>"{{ app.user.tipocuota.mensaje}}"</i> <br><br>
+	  <h3>	          Para el curso actual (<i>{{ app.user.tipocuota.nombre}}</i>) : <font color=blue> <i>"{{ app.user.tipocuota.mensaje}}"</i> <br> </font> </h3>
 		           	{% endif %}
 		           {% if app.user.mensaje %}
-		           Mensaje automático del sistema: <i>"{{ app.user.mensaje}}"</i>
+	<h3>	         Mensaje automático del sistema:   <font color=red> <i>"{{ app.user.mensaje}}"</i>   </font> <h3>
 		           {% endif %}
 	    	
 	    	
-	    	<br><br>
+	    	<br>
 	    	
 	    <div class="row">
 	    	
