@@ -55,7 +55,7 @@ class UsuarioType extends AbstractType
            
             ->add('tipocuota', EntityType::class, array('class' => 'CYAYogaBundle:Tipocuota','query_builder' => function (EntityRepository $er) 
                     { return $er->createQueryBuilder('t')
-                        ->where('1 = 1')
+                        ->where('t.activa = 1')
                         ->andwhere ('t.nombre <> :locker')
                         ->andwhere ('t.nombre <> :asoc')
                         ->setParameter('locker','Locker')
