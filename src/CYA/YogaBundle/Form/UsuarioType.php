@@ -60,6 +60,7 @@ class UsuarioType extends AbstractType
                         ->andwhere ('t.nombre <> :asoc')
                         ->setParameter('locker','Locker')
                         ->setParameter('asoc','Asociación')
+                         ->orderBy('t.nombre', 'ASC')
                         ;
                         
                         
