@@ -807,7 +807,7 @@ class UsuarioController extends Controller
         
       $fechahoy = new \DateTime("now");
   
-    // $fechahoy = new \DateTime("2017".'-'."08".'-02'.' 00:00:00');
+     //$fechahoy = new \DateTime("2020".'-'."10".'-02'.' 00:00:00');
      $contador = 1;
      $acum = 0;
      while ($contador > 0){
@@ -1016,6 +1016,7 @@ class UsuarioController extends Controller
                     $alumnocc->setTipo('PC');
                     $alumnocc->setDeuda($us->getTipocuota()->getValor() + $xlocker + $xasoc);
                     $alumnocc->setMes($mes); 
+                    $alumnocc->setComentario($us->getBonificacion()); 
                     $em = $this->getDoctrine()->getManager();
                     $em->persist($alumnocc);
                     $em->flush(); 
@@ -1190,6 +1191,8 @@ class UsuarioController extends Controller
             $alumnocc->setTipo('PC');
             $alumnocc->setDeuda($usuario->getTipocuota()->getValor()+ $xasoc + $xlocker);
             $alumnocc->setMes($mes); 
+            $alumnocc->setComentario($usuario->getBonificacion()); 
+            
             $em = $this->getDoctrine()->getManager();
             $em->persist($alumnocc);
             $em->flush(); 
