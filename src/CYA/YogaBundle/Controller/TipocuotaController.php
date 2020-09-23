@@ -8,7 +8,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Validator\Constraints as Assert;
 use CYA\YogaBundle\Entity\Tipocuota;
+use CYA\YogaBundle\Entity\Cursosold;
 use CYA\YogaBundle\Form\TipocuotaType;
+
 
 class TipocuotaController extends Controller
 {
@@ -91,7 +93,15 @@ class TipocuotaController extends Controller
                     foreach($usuariot as $usu){ //elimino todos los usuarios de esa cuota
                      
                         //inserto los que se van a borrar en la tabla nueva TipoCuotaBorrada
-                       
+                        
+                        $em = $this->getDoctrine()->getManager();
+                        $cursosold = new Cursosold();
+                        $cursosold->setTipocuota ($tipocuota);
+                        $cursosold->setUsuario ($usu);
+                        $em->persist($cursosold);
+                        $em->flush();
+                      
+                     
                      
                         $this->addFlash('notice', 'Se quitará de este tipo de cuota al usuario: '.$usu->getNombre());
                         $cuotaguion = $em->getRepository('CYAYogaBundle:Tipocuota')->find(23);
