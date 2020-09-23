@@ -1,0 +1,79 @@
+{% extends 'layout.html.twig' %}
+
+  
+{% block body %}
+{{ parent() }}
+{#{{ include('CYAYogaBundle:Usuario:messages/success.html.twig')}}#}
+{#{{ include('CYAYogaBundle:Usuario:messages/danger.html.twig')}}#}
+
+
+<div class="container-fluid alumnos">
+        <div class="container alumnos-icon">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2><i class="fa fa-gift" aria-hidden="true"></i>&nbsp;  Cursos Finalizados</h2>
+                    
+                </div>
+               
+                <div class="col-sm-7">
+                    
+                    <form method="get" action="" class="form-inline pull-right" role="search">
+        				<div class="form-group">
+        					          <div class="form-group">
+                            <select class="selectpicker" data-live-search="true" id="cursosfin" name="cursosfin" value="{{ app.request.get('cursosfin') }}">
+                                <option value="" selected disabled>Cursos Finalizados</option>
+                                {% for us in cursosfin %}
+                                    <option value="{{ us.id }}">{{ us.nombre }}</option>
+                                {% endfor %}
+                             </select>
+                        </div>
+        				</div>
+        				
+        				
+        				<input type="submit" value="Buscar" class="btn btn-sm btn-primary">
+        			</form>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div class="container">
+	    <div class="row">
+	    	
+	    <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+
+							<th>Alumno</th>
+							<th>DNI</th>
+							<th>Email</th>
+							<th>Teléfono</th>
+							<th>Curso </th>
+							
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for cursold in pagination %}
+                                <tr data-id="{{ cursold.id }}">
+                                
+                                <td>{{ cursold.usuario.apellido }}, {{ cursold.usuario.nombre }} </td>
+                                <td>{{ cursold.usuario.dni }}</td>
+                                  <td>{{ cursold.usuario.mail }}</td>
+                                    <td>{{ cursold.usuario.telefono }}</td>
+                                <td>{{ cursold.tipocuota.nombre }}</td>
+                               
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+           <H4> {% trans %}Total Alumnos que finalizaron el Curso:{% endtrans %} {{ pagination.getTotalItemCount }}</H4>
+                {# display navigation #}
+                <div class="navigation">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

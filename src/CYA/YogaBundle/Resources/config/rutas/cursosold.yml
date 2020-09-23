@@ -1,0 +1,4 @@
+cya_cursosold_index:
+    path:    /index
+    defaults: { _controller: CYAYogaBundle:Cursosold:index }
+    

@@ -35,6 +35,12 @@ cya_yoga_lockersocio:
 cya_yoga_producto:
     resource: "@CYAYogaBundle/Resources/config/rutas/producto.yml"
     prefix:   /producto
+    
+cya_yoga_cursosold:
+    resource: "@CYAYogaBundle/Resources/config/rutas/cursosold.yml"
+    prefix:   /cursosold
+    
+    
 
 cya_yoga_alumnocc:
     resource: "@CYAYogaBundle/Resources/config/rutas/alumnocc.yml"
