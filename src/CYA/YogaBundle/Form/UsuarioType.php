@@ -39,7 +39,7 @@ class UsuarioType extends AbstractType
             ->add('fechaingreso', DateType::class, array('widget' => 'single_text','attr' => ['class' => 'js-datepicker'],'data' => new \DateTime("now")))
             ->add('fechareingreso', DateType::class, array('widget' => 'single_text','attr' => ['class' => 'js-datepicker'],'data' => new \DateTime("now")))
             ->add('password', PasswordType::class)
-            ->add('rol', ChoiceType::class, array('choices' => array('Superadmin' => 'ROLE_SUPER', 'Administrador' => 'ROLE_ADMIN', 'Usuario' => 'ROLE_USER' ), 'placeholder' => 'Seleccione un rol'))
+            ->add('rol', ChoiceType::class, array('choices' => array('Superadmin' => 'ROLE_SUPER', 'Administrador' => 'ROLE_ADMIN', 'Usuario' => 'ROLE_USER', 'Profesores' => 'ROLE_PE' ), 'placeholder' => 'Seleccione un rol'))
             ->add('isActive', CheckboxType::class, array('required' => false,
                                                          'data'     => true,
                                                          'attr'     =>array ('class'=>'inputswitch','data-on-text'=>'ACTIVO','data-off-text'=>'INACTIVO'))) 

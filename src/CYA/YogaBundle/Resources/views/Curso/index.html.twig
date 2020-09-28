@@ -17,7 +17,7 @@
                 
              <br> <br> <br>
                 
-                	{% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN') %}
+                	{% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN') or is_granted ('ROLE_PE') %}
                 
                     <form method="get" action="" class="form-inline pull-right" role="search">
                         
@@ -66,7 +66,7 @@
 							{#<th>{{ knp_pagination_sortable(pagination, 'Fecha inicio', 'r.fechaini') }} </th>#}
 							{#<th>{{ knp_pagination_sortable(pagination, 'Fecha Fin', 'r.fechafin') }} </th>#}
 						
-							{% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN') %}
+							{% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN') or is_granted ('ROLE_PE') %}
                             <th>Acciones</th>
                         	{% endif %}
                             
@@ -86,7 +86,7 @@
                                 {#<td>{{ curso.fechafin | date('d/m/Y')}}</td>#}
                                 
                                 
-                                {% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN') %}
+                                {% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN')or is_granted ('ROLE_PE') %}
                                 
                                 <td class="actions">
                                     <a href="{{ path('cya_curso_edit', {id: curso.id, cursoid: elegida.id, cursonombre: elegida.nombre }) }}" class="btn btn-success" title="Editar">
@@ -114,7 +114,7 @@
                     
                 </table>
                 
-                	{% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN') %}
+                	{% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN')or is_granted ('ROLE_PE') %}
                          <a href="{{ path('cya_curso_add', {cursoid: elegida.id, cursonombre: elegida.nombre} ) }}" class="link">
         			        <h4>
         			           <span><i class="icon ion-plus"></i></span>

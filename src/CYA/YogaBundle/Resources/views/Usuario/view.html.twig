@@ -133,6 +133,8 @@
 						Usuario
 			    	{% elseif usuario.rol == 'ROLE_SUPER' %}
 				    	Superadmin
+				   	{% elseif usuario.rol == 'ROLE_PE' %}
+				    	Profesores
                 	{% endif %}
 	                &nbsp;
 	            </dd>
