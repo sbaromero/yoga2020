@@ -114,7 +114,7 @@
                     
                 </table>
                 
-                	{% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN')or is_granted ('ROLE_PE') %}
+                	{% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN') or is_granted ('ROLE_PE') %}
                          <a href="{{ path('cya_curso_add', {cursoid: elegida.id, cursonombre: elegida.nombre} ) }}" class="link">
         			        <h4>
         			           <span><i class="icon ion-plus"></i></span>

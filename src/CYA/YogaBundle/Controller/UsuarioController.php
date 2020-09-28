@@ -1053,13 +1053,15 @@ class UsuarioController extends Controller
         $arraycuotas = $querycuotasactivas->getResult();
         foreach($arraycuotas as $usa){
    
-           if ($usa->getFechavenc() <  $fechahoy &&$usa->getFechavenc() != null ){
+   
+           if ($usa->getFechavenc() <  $fechahoy &&$usa->getFechavenc() != null ) {
             
             $mensaje = 'Se venció la fecha de: ' . strtoupper($usa->getNombre()). '. Debe ingresar al tipo de cuota y proponer un nuevo VALOR y una nueva FECHA DE VENCIMIENTO';
             $this->addFlash('notice', $mensaje);
                                             }
             }
    
+       
    
    
     }
