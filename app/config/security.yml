@@ -46,11 +46,11 @@ security:
         - { path: ^/usuario/home, roles: [ROLE_ADMIN, ROLE_SUPER, ROLE_USER] }
         - { path: ^/usuario/editpublic, roles: ROLE_USER }
         - { path: ^/usuario/editavatar, roles: [ROLE_USER,ROLE_ADMIN,ROLE_SUPER] }
-        - { path: ^/usuario/edit, roles: [ROLE_ADMIN, ROLE_SUPER] }
+        - { path: ^/usuario/edit, roles: [ROLE_ADMIN, ROLE_SUPER, ROLE_PE] }
         - { path: ^/usuario/editpass, roles: [ROLE_ADMIN, ROLE_SUPER] }
         - { path: ^/usuario/add, roles: [ROLE_ADMIN, ROLE_SUPER] }
-        - { path: ^/usuario/index, roles: [ROLE_ADMIN, ROLE_SUPER] }
-        - { path: ^/usuario/view, roles: [ROLE_ADMIN, ROLE_SUPER] }
+        - { path: ^/usuario/index, roles: [ROLE_ADMIN, ROLE_SUPER, ROLE_PE] }
+        - { path: ^/usuario/view, roles: [ROLE_ADMIN, ROLE_SUPER, ROLE_PE] }
         - { path: ^/rubro, roles: [ROLE_ADMIN, ROLE_SUPER] }
         - { path: ^/producto, roles: [ROLE_ADMIN, ROLE_SUPER] }
         - { path: ^/alumnocc/indexpublic, roles: ROLE_USER }

@@ -22,7 +22,7 @@
         </div>
     </div>
 	
-	
+
 	
 	<div class="main container">
 		<div class="row well">
@@ -186,15 +186,19 @@
 		 	
 			              <br><br> 
 				
-				 	</div>
+				 	   </div>
 				 	 	</div>
+	
+	
+		<div class="main container">
 				 	 	
 				 	 	 <b> Bonificación (mensaje para sus cuentas corrientes) </b> 
                      {{ form_widget(form.bonificacion, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Porcentaje de Bonificación'} }) }}
                      <span class="text-danger"> {{ form_errors(form.bonificacion) }} </span>      
+
+	
 				 	 	
-				 	 	
-                      	<b> Ingrese un mensaje para este alumno: </b> 
+                      	<b> Ingrese un mensaje para este alumno ({{ usuario.nombre }} {{ usuario.apellido }}) : </b> 
                      {{ form_widget(form.mensaje, { 'attr' : { 'class' : 'form-control', 'placeholder' : 'Mensaje'} }) }}
                      <span class="text-danger"> {{ form_errors(form.mensaje) }} </span> 
             
@@ -206,7 +210,7 @@
 	            	    	<fieldset>
 	            	    	{{ form_end(form) }}
 	            	    	
-	            	    
+	          </DIV>  	    
 	  
 
 {% endblock %}

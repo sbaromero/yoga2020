@@ -15,7 +15,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-left">
-                {% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN')  %}
+                {% if is_granted('ROLE_SUPER') or is_granted('ROLE_ADMIN')   %}
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     
@@ -102,12 +102,23 @@
                    
                    
                     {% if is_granted('ROLE_PE') %}
-                    <li class="dropdown"><li class="dropdown"><li class="dropdown"><li class="dropdown">
+                      <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    
+                      <div class="change"><i class="fa fa-users"></i> &nbsp;Usuarios</div><div class="icon1"></div><span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                         <li><a href="{{ path('cya_usuario_index') }}">Listado de Usuarios</a></li>
+                    </ul>
+                 </li>
+                
+                        
+                        
+                <li class="dropdown"><li class="dropdown"><li class="dropdown">
                     
                     <li class="dropdown">
-                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     
-                    <div class="change"><i class="fa fa-graduation-cap"> </i> &nbsp;Cursos Online</div><div class="icon5"></div><span class="caret"></span></a>
+                      <div class="change"><i class="fa fa-graduation-cap"> </i> &nbsp;Cursos Online</div><div class="icon5"></div><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="{{ path('cya_curso_index') }}">Videos / Archivos</a></li>
                    </ul>
