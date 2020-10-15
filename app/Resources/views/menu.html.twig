@@ -157,7 +157,7 @@
                             
                            Cursos<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ path('cya_curso_index') }}">Videos</a></li>
+                                <li><a href="{{ path('cya_curso_index',{ cuota: app.user.tipocuota.id}) }}">Videos</a></li>
 
                            </ul>
                           </li>

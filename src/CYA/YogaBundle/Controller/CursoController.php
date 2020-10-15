@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Form\FormError;
 use CYA\YogaBundle\Entity\Curso;
+use CYA\YogaBundle\Entity\Usuario;
 use CYA\YogaBundle\Entity\TipoCuota;
 use CYA\YogaBundle\Form\CursoType;
 
@@ -47,7 +48,15 @@ class CursoController extends Controller
          $cursos = $em->createQuery($dql);  
 
 
-    
+  /*       if ($cuotaelegida == null){
+             
+             $em = $this->getDoctrine()->getManager();
+             $usuario = $this->get('security.token_storage')->getToken()->getUser();
+
+             $cuotaelegida = $usuario->getTipocuota();
+         }
+*/
+
 
 
         $paginator = $this->get('knp_paginator');
