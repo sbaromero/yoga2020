@@ -46,7 +46,8 @@
                             <tr data-id="{{ tipocuota.id }}">
                                 
                                 
-                         
+                          {% 
+                                if  tipocuota.activa   == 1 %}
                                
                             
                                 
@@ -99,7 +100,6 @@
 
 
 
-
                                 <td class="actions">
                                     <a href="{{ path('cya_tipocuota_edit', {id: tipocuota.id }) }}" class="btn btn-success"  title="Editar">
                                    <i class="fa fa-pencil"></i> 
@@ -114,10 +114,13 @@
                                     
                                 </td>
                             </tr>
+                            
+                            
+  {% endif %} 
                         {% endfor %}
                     </tbody>
                 </table>
-           <H4> Total Tipos de cuota: {{ pagination.getTotalItemCount }}</H4>
+ 
                 {# display navigation #}
                 <div class="navigation">
                     {{ knp_pagination_render(pagination) }}
